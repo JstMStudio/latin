@@ -170,7 +170,7 @@
 .home-section{
   position: fixed;
   background: #E4E9F7;
-  min-height: 100vh;
+  min-height: 200vh;
   top: 0;
   left: 78px;
   width: calc(100% - 78px);
@@ -178,6 +178,8 @@
   z-index: 2;
   text-align: center;
   color: green;
+  height:100%;
+  overflow: scroll;
 }
 .sidebar.open ~ .home-section{
   left: 250px;
@@ -268,6 +270,59 @@ background-color: black;
   cursor: pointer;
   color: yellow;
 }
+
+.overlay {
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+    width: 0;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0, 0.9);
+  background-color: cyan;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content{
+  position: relative;
+  top: 8%;
+  width: 90%;
+  margin-top: 30px;
+  text-align: center;
+  color:red;
+  font-size: 18px;
+  display: block;
+  transition: 0.3s;
+  padding:10px;
+  left: 70px;
+}
+
+.overlay-content p{
+padding:16px;
+text-align: center;
+padding-right: 20px;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: green;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
     </style>
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -353,7 +408,145 @@ background-color: black;
 <h1>About Us</h1>
 <p>a</p>
 <br>
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <h1>Community</h1>
+    <p>Welcome to One Future Unified Team Community! One Future Unified Team has many official community across many type of website platform like Revolt.chat and Guilded. One Future Unified Team community is currently well maintained and moderated by the team specialist and is currently for all of our users, customers and fans.<br><br>One Future Unified Team community is a place for everyone and user of One Future Unified Team to gather around and hangout and for user to ask for support, report bugs and give feedback. </p>
+    <hr> 
+    <h2>Revolt</h2>
+    <p>One Future Unified Team currently operate and maintain the official server of the team on our Revolt server. Users could join One Future Unified Team Revolt server to join our community hangout, ask for support, give feedbacks, report bugs and chat with staff. You could also get the official announcement of One Future Unified Team too. You could join our <a href="https://app.revolt.chat/invite/cPgxVqY4" style="color:red;">Revolt server here</a>.</p> 
+    <hr>
+    <h2>Guilded</h2>
+    <p>One Future Unified Team also operate and maintain an official Guilded server too. Users could join One Future Unified Team Guilded server to join our community hangout, ask for support, create ticket, give feedbacks, report bugs, discuss with team. You could also get the official announcement of One Future Unified Team too.</p>
+    <iframe src="https://www.guilded.gg/canvas_index.html?route=%2Fcanvas%2Fembed%2Fteamcard%2FWErNJm8E&size=large" width="553" height="262" frameborder="0" scrolling="no"></iframe>
+  </div>
+</div>
 
+<div id="myNav1" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav1()">&times;</a>
+  <div class="overlay-content">
+    <h1>Donation</h1>
+    <p>One Future Unified Team is funded via many methods and ways, with the most common from donation and afterwards, ads revenue from our ads page. We currently do not sell any and all of the basic user data we collected to maintain the website so donation is the road for revenue for the team, rather it is $1 or $5, it still matter a lot to us. Every single cent would be used in the team directly or indirectly.
+    <hr>
+    <h2>Buy Me A Coffee</h2>
+    <p>One Future Unified Team currently has a Buy Me A Coffee pages for everyone to choose to donated us monthly or one time only. You could also leave us a public messages too on our pages too. Buy Me A Coffee currently charge a 5% fees for each donation so we only received 95% of all donation and monthly membership. This page is owned by Jst Tan, CEO and shareholder of One Future Unified Team. </p>
+    <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="jestonjst" data-color="#FFDD00" data-emoji=""  data-font="Cookie" data-text="Buy me a drink" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>
+    <br>
+    <hr>
+    <h2>Ko-Fi</h2>
+    <p>One Future Unified Team also currently operates a Ko-Fi pages too for everyone to choose to donate us monthly or via monthly donation on Ko-Fi too. You could leave a public message to us on our Ko-Fi pages too. Ko-Fi currently charge a 5% fees for each monthly donation so we only received 95% of all monthly membership while it is a 100% full-time donation. This page is owned by Jst Tan, CEO and shareholder of One Future Unified Team.</p>
+    <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support Me on Ko-fi', '#28e059', 'R6R8BLGHG');kofiwidget2.draw();</script> 
+  </div>
+</div>
+
+<div id="myNav2" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+  <div class="overlay-content">
+    <h1>News</h1>
+    <p>Welcome to One Future Unified Team news! A news place to get all news like announcements, updates and etc of One Future Unified Team. Get all of the latest official news of One Future Unified Team here.</p>
+    <hr>
+  </div>
+</div>
+
+<div id="myNav3" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav3()">&times;</a>
+  <div class="overlay-content">
+    <h1>Services</h1>
+  </div>
+</div>
+
+<div id="myNav4" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav4()">&times;</a>
+  <div class="overlay-content">
+    <h1>Team</h1>
+  </div>
+</div>
+
+<div id="myNav5" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav5()">&times;</a>
+  <div class="overlay-content">
+    <h1>Staff</h1>
+  </div>
+</div>
+
+<div id="myNav6" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav6()">&times;</a>
+  <div class="overlay-content">
+    <h1>Partner</h1>
+  </div>
+</div>
+<div style="font-size:30px;background-color:yellow;width:80%;text-align:center;color:red;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav2()">News</div>
+<br>
+<div style="font-size:30px;background-color:yellow;width:80%;text-align:center;color:red;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav()">Community</div>
+<br>
+<div style="font-size:30px;background-color:yellow;width:80%;text-align:center;color:red;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav1()">Donation</div>
+<br>
+<div style="font-size:30px;background-color:yellow;width:80%;text-align:center;color:red;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav3()">Services</div>
+<br>
+<div style="font-size:30px;background-color:yellow;width:80%;text-align:center;color:red;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav6()">Partner</div>
+<br>
+<div style="font-size:30px;background-color:yellow;width:80%;text-align:center;color:red;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav4()">Teams</div>
+<br>
+<div style="font-size:30px;background-color:yellow;width:80%;text-align:center;color:red;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav5()">Staff</div>
+<br>
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+
+function openNav1() {
+  document.getElementById("myNav1").style.width = "100%";
+}
+
+function closeNav1() {
+  document.getElementById("myNav1").style.width = "0%";
+}
+
+function openNav2() {
+  document.getElementById("myNav2").style.width = "100%";
+}
+
+function closeNav2() {
+  document.getElementById("myNav2").style.width = "0%";
+}
+
+function openNav3() {
+  document.getElementById("myNav3").style.width = "100%";
+}
+
+function closeNav3() {
+  document.getElementById("myNav3").style.width = "0%";
+}
+
+function openNav4() {
+  document.getElementById("myNav4").style.width = "100%";
+}
+
+function closeNav4() {
+  document.getElementById("myNav4").style.width = "0%";
+}
+
+function openNav5() {
+  document.getElementById("myNav5").style.width = "100%";
+}
+
+function closeNav5() {
+  document.getElementById("myNav5").style.width = "0%";
+}
+
+function openNav6() {
+  document.getElementById("myNav6").style.width = "100%";
+}
+
+function closeNav6() {
+  document.getElementById("myNav6").style.width = "0%";
+}
+</script>
 <br><br>
   <hr>
   <br>
