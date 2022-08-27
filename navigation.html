@@ -168,21 +168,24 @@
   border-radius: 12px;
 }
 .home-section{
-  position: fixed;
   background: #E4E9F7;
-  min-height: 100vh;
+  min-height: 200vh;
   top: 0;
-  left: 78px;
-  width: calc(100% - 78px);
+  margin-left: 85px;
+  padding-right: 20px;
+  width: 90%;
   transition: all 0.5s ease;
   z-index: 2;
   text-align: center;
   color: green;
+  height:100%;
 }
 .sidebar.open ~ .home-section{
   left: 250px;
-  width: calc(100% - 250px);
+  width: calc(100% - 260px);
+  margin-left: 260px;
 }
+
 .home-section .text{
   display: inline-block;
   color: #11101d;
@@ -196,6 +199,9 @@
   }
 }
 
+body {
+background-color: #E4E9F7;
+} 
 .collapsible {
   background-color: #f1f1f1;
   color: red;
@@ -214,6 +220,46 @@
   overflow: hidden;
   background-color: #f1f1f1;
   color: red;
+}
+
+body.dark-mode {
+  background-color: black;
+  color: cyan;
+}
+
+body.red-mode {
+  background-color: red;
+  color: white;
+}
+
+body.blue-mode {
+  background-color: blue;
+  color: cyan;
+}
+
+body.green-mode {
+  background-color: green;
+  color: yellow;
+}
+
+body.yellow-mode {
+  background-color: yellow;
+  color: green;
+}
+
+body.orange-mode {
+  background-color: orange;
+  color: blue;
+}
+
+body.purple-mode {
+  background-color: purple;
+  color: cyan;
+}
+
+body.magenta-mode {
+  background-color: magenta;
+  color: #1a2b22;
 }
 
 .dark-mode .home-section {
@@ -253,9 +299,12 @@
 
 .magenta-mode .home-section {
   background-color: magenta;
-  color: #1508a6;
+  color: #1a2b22;
 }
-
+.body {
+  background: #E4E9F7;
+  }
+  
 .button2 {
 float:left;
 background-color: black;
@@ -342,9 +391,8 @@ background-color: black;
     </ul>
   </div>
   <section class="home-section">
-  <h1>A</h1>
-  <p>a</p>
-  <br><br>
+
+<br><br>
   <hr>
   <br>
   <h1>Themes</h1>
