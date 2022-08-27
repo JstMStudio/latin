@@ -168,23 +168,24 @@
   border-radius: 12px;
 }
 .home-section{
-  position: fixed;
   background: #E4E9F7;
   min-height: 200vh;
   top: 0;
-  left: 78px;
-  width: calc(100% - 78px);
+  margin-left: 85px;
+  padding-right: 20px;
+  width: 90%;
   transition: all 0.5s ease;
   z-index: 2;
   text-align: center;
   color: green;
   height:100%;
-  overflow: scroll;
 }
 .sidebar.open ~ .home-section{
   left: 250px;
-  width: calc(100% - 250px);
+  width: calc(100% - 260px);
+  margin-left: 260px;
 }
+
 .home-section .text{
   display: inline-block;
   color: #11101d;
@@ -198,6 +199,9 @@
   }
 }
 
+body {
+background-color: #E4E9F7;
+} 
 .collapsible {
   background-color: #f1f1f1;
   color: red;
@@ -216,6 +220,46 @@
   overflow: hidden;
   background-color: #f1f1f1;
   color: red;
+}
+
+body.dark-mode {
+  background-color: black;
+  color: cyan;
+}
+
+body.red-mode {
+  background-color: red;
+  color: white;
+}
+
+body.blue-mode {
+  background-color: blue;
+  color: cyan;
+}
+
+body.green-mode {
+  background-color: green;
+  color: yellow;
+}
+
+body.yellow-mode {
+  background-color: yellow;
+  color: green;
+}
+
+body.orange-mode {
+  background-color: orange;
+  color: blue;
+}
+
+body.purple-mode {
+  background-color: purple;
+  color: cyan;
+}
+
+body.magenta-mode {
+  background-color: magenta;
+  color: #1a2b22;
 }
 
 .dark-mode .home-section {
@@ -255,9 +299,12 @@
 
 .magenta-mode .home-section {
   background-color: magenta;
-  color: #1508a6;
+  color: #1a2b22;
 }
-
+.body {
+  background: #E4E9F7;
+  }
+  
 .button2 {
 float:left;
 background-color: black;
@@ -404,9 +451,6 @@ padding-right: 20px;
   <a href="team.html">Team</a>
   <a href="staff.html">Staff</a>
   
-
-<h1>About Us</h1>
-<p>a</p>
 <br>
 <div id="myNav" class="overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -453,13 +497,70 @@ padding-right: 20px;
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav3()">&times;</a>
   <div class="overlay-content">
     <h1>Services</h1>
+    <p>One Future Unified Team provide many services across all of our child team. We provides many awesome services from our web development and animation studio.</p>
+<ul>
+<li><strong>Website Development Team</strong>
+<ul>
+<li>Website Development</li>
+<li>Website Maintainence</li>
+<li>Advertising</li>
+</ul>
+</li>
+<br>
+<li><strong>Animation Studio</strong>
+<ul>
+<li>Logo Designing</li>
+<li>Poster Designing</li>
+<li>Writing Post</li>
+</ul>
+</li>
+</ul>
   </div>
 </div>
 
 <div id="myNav4" class="overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav4()">&times;</a>
   <div class="overlay-content">
-    <h1>Team</h1>
+    <h1>Team</h1> 
+    <p>One Future Unified Team currently has many child team. Our current main child team is our Web Development team. One Future Unified Team currently has two child team, Web Development and Animation Studio.</p>
+    <br>
+    <hr>
+    <br>
+    <div style="color: green;">
+    <h2>Web Development</h2>
+    <p>One Future Unified Team Developer Team is owned and fully maintained by One Future Unified Team. One Future Unified Team Developer Team is a subsidiaries of One Future Unified Team. One Future Unified Team Developer Team create websites, app, software and games for our customers and clients alike with some for our main team, One Future Unified Team.</p>
+    <h3>Services</h3>
+    <ul style="text-align:center;">
+    <li>Website Development</li>
+    <li>Website Maintainence</li>
+    <li>Advertising</li>
+    </ul>
+    <br>
+    <h3>Works</h3>
+    <ul style="text-align:center;">
+    <li>InfoHQ</li>
+    <li>Coding School</li>
+    <li>One Future Unified Team App</li>
+    </ul>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div style="color: blue;">
+    <h2>Animation Studio</h2>
+    <p>One Future Unified Team Animation Studio is owned and fully maintained by One Future Unified Team. One Future Unified Team Animation Studio is a subsidiaries of One Future Unified Team. One Future Unified Team Animation Studio provided many services to our customers and clients. One Future Unified Team Animation Studio offered lower price then any other production companies too so our customers and client could cut cost by using our services.</p>
+    <h3>Services</h3>
+    <ul style="text-align:center;">
+    <li>Logo Designing</li>
+    <li>Poster Designing</li>
+    <li>Writing Post</li>
+    </ul>
+    <br>
+    <h3>Works</h3>
+    <ul style="text-align:center;">
+    <li>Teenager Heroes</li>
+    </ul>
+    </div>
   </div>
 </div>
 
@@ -467,6 +568,16 @@ padding-right: 20px;
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav5()">&times;</a>
   <div class="overlay-content">
     <h1>Staff</h1>
+    <p>
+    <ul>
+    <li><strong>Jst Tan</strong><br>Jst Tan is the founder, CEO of One Future Unified Team. Jst Tan is the lead developer of One Future Unified Team, video editor and story writer of One Future Unified Team. Jst Tan is the creator and executive writer of Teenager Heroes book series.</li>
+    <br>
+	<li><strong>Lim Wei Bing</strong><br>Lim Wei Bing is the vice founder and CEO of One Future Unified Team. Lim Wei Bing is the developer, finances and designer of One Future Unified Team.</li>
+    <br>
+    <li><strong>Jerry Zheung</strong><br>Jerry Zheung is the manager of One Future Unified Team. Jerry Zheung is a developer in One Future Unified Team Development Team which translates website and software for One Future Unified Team and manages the Chinese part of One Future Unified Team.</li>
+    <br>
+	<li><strong>Say Jia He</strong><br>Say Jia He is a member of One Future Unified Team, a future developer in One Future Unified Team Development Team.</li>
+    </ul>
   </div>
 </div>
 
@@ -474,21 +585,44 @@ padding-right: 20px;
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav6()">&times;</a>
   <div class="overlay-content">
     <h1>Partner</h1>
+    <p>
   </div>
 </div>
-<div style="font-size:30px;background-color:yellow;width:80%;text-align:center;color:red;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav2()">News</div>
+<h1>About Us</h1>
+<p>One Future Unified Team is a small team based in Malaysia. One Future Unified Team is focused in many stuff from story writing until website development. One Future Unified Team is founded from a group of young friends with an interest in technology. It was founded as a group of developer and non-developer working on some websites and helping to built websites for others.</p>
 <br>
-<div style="font-size:30px;background-color:yellow;width:80%;text-align:center;color:red;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav()">Community</div>
+<hr>
 <br>
-<div style="font-size:30px;background-color:yellow;width:80%;text-align:center;color:red;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav1()">Donation</div>
+<h2>Contact Us</h2>
+<p>Unlike Facebook, Google and other huge tech companies, we are open for everyone to contact us for any and all purposes. You could contact One Future Unified Team for many purposes, like support, feedback, bugs report, suggestion, donation, sponsorship and etc. Please do not contact us for promotion and spam through, we wouldn't send any replies to non-related email in our mailbox and would move it to spam as soon as possible.</p>
 <br>
-<div style="font-size:30px;background-color:yellow;width:80%;text-align:center;color:red;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav3()">Services</div>
+<li><a href="https://www.facebook.com/OFUTeam">Facebook</a><br>
+Facebook is the current main social media platform of One Future Unified Team. We post contents like announcements, updates, and news in our official Facebook pages once in a while. You could also contacted us directly via Facebook Messenger to our official Facebook pages too for support, bugs report, feedback and suggestion and also review us.</li>
 <br>
-<div style="font-size:30px;background-color:yellow;width:80%;text-align:center;color:red;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav6()">Partner</div>
+<li><a href="https://twitter.com/OFUT2022">Twitter</a><br>
+Twitter is One Future Unified Team second social media platform. We post contents about announcements, updates and news in our official Twitter account too. You could also send us a message request to contacted us directly on Twitter for support, bugs report, feedback and suggestion.</li>
 <br>
-<div style="font-size:30px;background-color:yellow;width:80%;text-align:center;color:red;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav4()">Teams</div>
+<hr>
 <br>
-<div style="font-size:30px;background-color:yellow;width:80%;text-align:center;color:red;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav5()">Staff</div>
+<h2>Information</h2>
+<br>
+<div style="font-size:30px;background-color:yellow;width:90%;text-align:center;color:red;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav3()">Services</div>
+<br>
+<div style="font-size:30px;background-color:yellow;width:90%;text-align:center;color:red;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav2()">News</div>
+<br>
+<div style="font-size:30px;background-color:yellow;width:90%;text-align:center;color:red;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav4()">Teams</div>
+<br>
+<div style="font-size:30px;background-color:yellow;width:90%;text-align:center;color:red;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav5()">Staff</div>
+<br>
+<hr>
+<br>
+<h2>Community</h2>
+<br>
+<div style="font-size:30px;background-color:yellow;width:90%;text-align:center;color:red;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav()">Community</div>
+<br>
+<div style="font-size:30px;background-color:yellow;width:90%;text-align:center;color:red;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav1()">Donation</div>
+<br>
+<div style="font-size:30px;background-color:yellow;width:90%;text-align:center;color:red;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav6()">Partner</div>
 <br>
 <script>
 function openNav() {
