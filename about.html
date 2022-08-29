@@ -326,7 +326,7 @@ background-color: black;
   top: 0;
   left: 0;
   background-color: rgba(0,0,0, 0.9);
-  background-color: cyan;
+  background-color: yellow;
   overflow-x: hidden;
   transition: 0.5s;
 }
@@ -337,7 +337,7 @@ background-color: black;
   width: 90%;
   margin-top: 30px;
   text-align: center;
-  color:red;
+  color:green;
   font-size: 18px;
   display: block;
   transition: 0.3s;
@@ -588,6 +588,24 @@ padding-right: 20px;
     <p>
   </div>
 </div>
+
+<div id="myNav7" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav7()">&times;</a>
+  <div class="overlay-content">
+    <h1>Status</h1>
+    <br>
+    <iframe src="https://status.onefutureunifiedteam.tk" style="width:100%;height:2890px;"></iframe>
+  </div>
+</div>
+
+<div id="myNav8" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav8()">&times;</a>
+  <div class="overlay-content">
+    <h1>Blog</h1>
+    <p>
+  </div>
+</div>
+
 <h1>About Us</h1>
 <p>One Future Unified Team is a small team based in Malaysia. One Future Unified Team is focused in many stuff from story writing until website development. One Future Unified Team is founded from a group of young friends with an interest in technology. It was founded as a group of developer and non-developer working on some websites and helping to built websites for others.</p>
 <br>
@@ -606,23 +624,27 @@ Twitter is One Future Unified Team second social media platform. We post content
 <br>
 <h2>Information</h2>
 <br>
-<div style="font-size:30px;background-color:yellow;width:90%;text-align:center;color:red;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav3()">Services</div>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav8()" id="blog">Blog</div>
 <br>
-<div style="font-size:30px;background-color:yellow;width:90%;text-align:center;color:red;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav2()">News</div>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav3()" id="services">Services</div>
 <br>
-<div style="font-size:30px;background-color:yellow;width:90%;text-align:center;color:red;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav4()">Teams</div>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav2()" id="news">News</div>
 <br>
-<div style="font-size:30px;background-color:yellow;width:90%;text-align:center;color:red;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav5()">Staff</div>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav4()" id="teams">Teams</div>
+<br>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav5()" id="staff">Staff</div>
+<br>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav7()" id="status">Status</div>
 <br>
 <hr>
 <br>
 <h2>Community</h2>
 <br>
-<div style="font-size:30px;background-color:yellow;width:90%;text-align:center;color:red;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav()">Community</div>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav()" id="community">Community</div>
 <br>
-<div style="font-size:30px;background-color:yellow;width:90%;text-align:center;color:red;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav1()">Donation</div>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav1()" id="donation">Donation</div>
 <br>
-<div style="font-size:30px;background-color:yellow;width:90%;text-align:center;color:red;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav6()">Partner</div>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav6()" id="partner">Partner</div>
 <br>
 <script>
 function openNav() {
@@ -679,6 +701,22 @@ function openNav6() {
 
 function closeNav6() {
   document.getElementById("myNav6").style.width = "0%";
+}
+
+function openNav7() {
+  document.getElementById("myNav7").style.width = "100%";
+}
+
+function closeNav7() {
+  document.getElementById("myNav7").style.width = "0%";
+}
+
+function openNav8() {
+  document.getElementById("myNav8").style.width = "100%";
+}
+
+function closeNav8() {
+  document.getElementById("myNav8").style.width = "0%";
 }
 </script>
 <br><br>
