@@ -3,5 +3,4 @@
 <ul>
   <li>Terms</li>
   <li>Blog</li>
-  <li>Uptime</li>
 </ul>
