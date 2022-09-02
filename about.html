@@ -394,6 +394,42 @@ padding-right: 20px;
   text-align:center;
   font-size: 18px;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL button {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: yellow;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: green;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
     </style>
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -604,7 +640,7 @@ padding-right: 20px;
   <div class="overlay-content">
     <h1>Partner</h1>
     <p>One Future Unified Team Partner Program is the official partner program of One Future Unified Team. A program which the team partner with individual and company from across the world. A program which the member represent the team. One Future Unified Team Partner Program is available for everyone to apply. One Future Unified Team Partner Program is a program which to make the team more closer and friendly to our official community and fans.</p>
-
+<br>
 <button type="button" class="collapsible2">Requirements <i class='bx bxs-caret-down-circle'></i></button>
 <div class="content2">
 <p>One Future Unified Team Partner Program currently have some basic requirements. All requirements listed here are strictly enforced and you are require to met all this requirement before applying or joining One Future Unified Team Partner Program. All of our requirements is listed below:</p>
@@ -634,11 +670,34 @@ padding-right: 20px;
   <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeBPTvkmrfmuCC4f4JnzmMSQ27xS0lY5sFrGUbLAcuwNVnRWA/viewform?embedded=true" width="100%" height="1930" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 </div>
 <br><br>
-<button type="button" class="collapsible2">List</button>
+<button type="button" class="collapsible2">List <i class='bx bxs-caret-down-circle'></i></button>
 <div class="content2">
   <p>Welcome to the list of all partners of One Future Unified Team! A place to know more about each and all One Future Unified Team Partners. A place to get all the partners of One Future Unified Team.</p><br>
+<input type="text" id="myInput" onkeyup="myFunction5()" placeholder="Search for partners" title="Type in a name">
+<ul id="myUL">
+  
+  <li><button type="button" class="collapsible2">Nonea</button>
+<div class="content2">
+  <p>None</p></div></li>
+  
+  <li><button type="button" class="collapsible2">None</button>
+<div class="content2">
+  <p>None</p></div></li>
+  
+  <li><button type="button" class="collapsible2">None</button>
+<div class="content2">
+  <p>None</p></div></li>
+  
+  <li><button type="button" class="collapsible2">None</button>
+<div class="content2">
+  <p>None</p></div></li>
+  
+  <li><button type="button" class="collapsible2">None</button>
+<div class="content2">
+  <p>None</p></div></li>
+</ul>
 <br>
-<iframe src="list.html" style="width:100%;height:300px;"></iframe>
+</div>
 </div>
 
 <script>
@@ -1096,6 +1155,23 @@ function menuBtnChange() {
  }else {
    closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the icons class
  }
+}
+
+function myFunction5() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("button")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
 }
   </script>
 
