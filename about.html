@@ -370,6 +370,30 @@ padding-right: 20px;
   right: 35px;
   }
 }
+
+.collapsible2 {
+  cursor: pointer;
+  outline: none; 
+  font-size:30px;
+  background-color:cyan;
+  width:100%;
+  text-align:center;
+  color:purple;
+  padding:10px;
+  font-weight: bold;
+  border-style: solid;
+}
+
+.content2 {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: cyan;
+  color: purple;
+  font-weight: bold;
+  text-align:center;
+  font-size: 18px;
+}
     </style>
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -579,7 +603,60 @@ padding-right: 20px;
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav6()">&times;</a>
   <div class="overlay-content">
     <h1>Partner</h1>
-    <p>
+    <p>One Future Unified Team Partner Program is the official partner program of One Future Unified Team. A program which the team partner with individual and company from across the world. A program which the member represent the team. One Future Unified Team Partner Program is available for everyone to apply. One Future Unified Team Partner Program is a program which to make the team more closer and friendly to our official community and fans.</p>
+
+<button type="button" class="collapsible2">Requirements <i class='bx bxs-caret-down-circle'></i></button>
+<div class="content2">
+<p>One Future Unified Team Partner Program currently have some basic requirements. All requirements listed here are strictly enforced and you are require to met all this requirement before applying or joining One Future Unified Team Partner Program. All of our requirements is listed below:</p>
+<ul>
+    <li>Have at least 100 followers on one of your social media. </li>
+    <li>Being active on your 1++ followers social media. </li>
+    <li>You must accept and follow our Community Guidelines and Terms Of Services. </li>
+    <li>Active in our official community. </li>
+</ul>
+</div>
+<br><br>
+<button type="button" class="collapsible2">Benefits <i class='bx bxs-caret-down-circle'></i></button>
+<div class="content2">
+  <p>By applying and joining One Future Unified Team Partner Program, we provided multiple benefits for each partners of One Future Unified Team. We are grateful for each and all partner for joining our program and we have provided many benefits for our partners. We will add more benefits for joining our Partner Program in the near future too. All benefits are listed below:</p>
+<ul>
+    <li>Priority Support</li>
+    <li>Frequent Shoutout</li>
+  <li>Special Listing</li>
+  <li>And much more!</li>
+</ul>
+</div>
+<br><br>
+<button type="button" class="collapsible2">Apply <i class='bx bxs-caret-down-circle'></i></button>
+<div class="content2">
+  <p>One Future Unified Team Partner Program is a partner program which One Future Unified Team partner up with individual or teams. It is currently opened for everyone to sign up. If you are interested in One Future Unified Team Partner Program, and met all the requirements and agree to all terms of One Future Unified Team Partner Program, you could apply for One Future Unified Team Partner Program by filling up the Google Form provided below. Each application to One Future Unified Team Partner Program is reviewed by a case-by-case basis by One Future Unified Team. Please took note that our staff have the right to approve or denied to any application to our Partner Program for no reason at all.</p>
+  <br><br>
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeBPTvkmrfmuCC4f4JnzmMSQ27xS0lY5sFrGUbLAcuwNVnRWA/viewform?embedded=true" width="100%" height="1930" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+</div>
+<br><br>
+<button type="button" class="collapsible2">List</button>
+<div class="content2">
+  <p>Welcome to the list of all partners of One Future Unified Team! A place to know more about each and all One Future Unified Team Partners. A place to get all the partners of One Future Unified Team.</p><br>
+<br>
+<iframe src="list.html" style="width:100%;height:300px;"></iframe>
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible2");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content2 = this.nextElementSibling;
+    if (content2.style.display === "block") {
+      content2.style.display = "none";
+    } else {
+      content2.style.display = "block";
+    }
+  });
+}
+</script>
   </div>
 </div>
 
