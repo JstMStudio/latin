@@ -399,36 +399,59 @@ padding-right: 20px;
   box-sizing: border-box;
 }
 
-#myInput {
-  background-image: url('/css/searchicon.png');
-  background-position: 10px 12px;
-  background-repeat: no-repeat;
-  width: 100%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
+.columns {
+  float: left;
+  width: 33.3%;
+  padding: 8px;
+  color: yellow;
 }
 
-#myUL {
+.price {
   list-style-type: none;
-  padding: 0;
+  border: 1px solid #eee;
   margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: #04AA6D;
 }
 
-#myUL button {
-  border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: yellow;
-  padding: 12px;
+.price:hover {
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.price .header {
+  background-color: red;
+  color: yellow;
+  font-size: 25px;
+}
+
+.price li {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+}
+
+.price .grey {
+  background-color: blue;
+  font-size: 20px;
+  color: yellow
+}
+
+.button {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
   text-decoration: none;
   font-size: 18px;
-  color: green;
-  display: block
 }
 
-#myUL li a:hover:not(.header) {
-  background-color: #eee;
+@media only screen and (max-width: 600px) {
+  .columns {
+    width: 100%;
+  }
 }
     </style>
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
@@ -516,14 +539,90 @@ padding-right: 20px;
 <div id="myNav1" class="overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav1()">&times;</a>
   <div class="overlay-content">
+  <br><br>
+<h1>Hosting shouldn't be a problem!</h1>
+  <h3>Having trouble finding hosting? No problem, we are here! A free managed-hosting for everyone to use and enjoy!</h3>
+  <br>
+  <hr>
+  <br>
+  <h2>About OFUT Hosting</h2>
+  <p>One Future Unified Team provide free hosting for everyone including developers in the world via One Future Unified Team Hosting. Users could request for a free hosting site with One Future Unified Team. </p>
+  <br>
+  <hr>
+  <br>
+  <h2>Open Source</h2>
+  <p>One Future Unified Team Hosting is open source. All of our codes to power and build One Future Unified Team Hosting is totally open source for everyone to view, study and read One Future Unified Team Hosting source codes.</p>
+  <br>
+  <hr>
+  <br>
+  <h2>Git</h2>
+  <p>One Future Unified Team Hosting also provide Git software for all of our developers and users. Git is a software for tracking changes in any set of files, usually used for coordinating work among programmers collaboratively developing source code during software development. </p>
+  <br>
+  <hr>
+  <br>
+  <h2>Easy Set Up</h2>
+  <p>One Future Unified Team Hosting is easy to set up and run. You could set up a site after getting approved without minutes. We are the easiest way for you to set up a website too. We also provide free support and documentation for you to set up your website.</p>
+  <br>
+  <hr>
+  <br>
+  <h2>Free</h2>
+  <p>One Future Unified Team Hosting is totally free for everyone to use and enjoy to host their websites. You could host your website for totally free with no hidden charges on One Future Unified Team Hosting. </p>
+  <br>
+  <hr>
+  <br>
+  <h2>Directory Listing</h2>
+  <p>One Future Unified Team Hosting also provide directory listing. You could check out all files of your sites directly on your directory for free and it is easier to manage all of your pages too. </p>
+  <br>
+  <hr>
+  <br>
+  <h2>Pricing Table</h2>
+  <div class="columns">
+  <ul class="price">
+    <li class="header"><a href="https://onefutureunifiedteam.github.io/Github-hosting/" style="color:yellow;">Github Pages</a></li>
+    <li class="grey">Free</li>
+    <li>10GB Bandwidth</li>
+    <li>1GB Storage</li>
+    <li>Free 500MB backup storage</li>
+    <li>Free Technical Support</li>
+    <li class="grey"><a href="" class="button">Sign Up</a></li>
+  </ul>
+</div>
 
+<div class="columns">
+  <ul class="price">
+    <li class="header"><a href="https://swdt-vercel-hosting.vercel.app/" style="color:yellow;">Vercel</a></li>
+    <li class="grey">Free</li>
+    <li>5GB Bandwidth</li>
+    <li>1GB Storage</li>
+    <li>Free 500MB backup storage</li>
+    <li>Free Technical Support</li>
+    <li class="grey"><a href="" class="button">Sign Up</a></li>
+  </ul>
+</div>
+
+<div class="columns">
+  <ul class="price">
+    <li class="header"><a href="https://software-and-website-developer-team.github.io/Store/hosting-premium.html" style="color:yellow;">Premium</a></li>
+    <li class="grey">Free</li>
+    <li>1GB Storage</li>
+	<li>100GB Bandwidth</li>
+	<li>500MB Backup Storage</li>
+	<li>Free Technical Support</li>
+	<li>Free Issues Tab</li>
+	<li>Free Discussion Tab</li>
+	<li>Free Projects Tab</li>
+	<li>Free Wiki</li>
+	<li>Free Insight</li>
+	<li>Custom Domains Supported</li>
+    <li class="grey"><a href="" class="button">Sign Up</a></li>
+  </ul>
+</div>
   </div>
 </div>
 
 <div id="myNav2" class="overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
   <div class="overlay-content">
-
   </div>
 </div>
 
@@ -578,14 +677,31 @@ padding-right: 20px;
 <h1>Store</h1>
 <p>One Future Unified Team is a small team based in Malaysia. One Future Unified Team is focused in many stuffs from website development to writing story. One Future Unified Team is founded from a group of young friends with an interest in technology.</p>
 <br>
+<hr>
 <br>
-<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav0()" id=""></div>
+<h1>Services</h1>
+  <p>One Future Unified Team currently provided many various services. Some are provided for free while some are paid according to your plans with us. All services provided by One Future Unified Team  are included in the premium plans. We will add more services to our plans in the future too.</p>
+  <br>
+<hr style="width:80%;margin:auto;">
 <br>
-<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav1()" id=""></div>
+  <h2>Web Design & Development</h2>
+  <p>We provide web development services in all of our plans. We will built your website for you with your preference. We do not use Wordpress or any site builders to built any of our websites. All codes is hand written by us per your preference.<br><br>We offered unlimited edits and changes to your websites too. We will customise it with unlimited changes to suit your preference and your needs no matter which plans you choosen.</p>
+  <br>
+<hr style="width:80%;margin:auto;">
 <br>
-<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav2()" id=""></div>
+  <h2>Busines Profile Management</h2>
+  <p>We also helped you to manage your Google, Yahoo and Bing business profile to keep it up to date with your needs and preference. We will also provide support for everything on those business profile too. We will also do monthly updates like posting and etc too depending on your plans.</p>
 <br>
-<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav3()" id=""></div>
+<hr>
+<br>
+<br>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav0()" id="ads">Ads</div>
+<br>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav1()" id="hosting">Hosting</div>
+<br>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav2()" id="store">Store</div>
+<br>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav3()" id="website">Website</div>
 <br>
 <div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav4()" id=""></div>
 <br>
