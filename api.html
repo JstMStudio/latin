@@ -11,7 +11,7 @@
   gtag('config', 'G-ZM4LK5K0LJ');
 </script>
     <link rel="stylesheet" href="style.css">
-    <title>Search</title>
+    <title>API</title>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 *{
@@ -130,23 +130,6 @@
   padding: 0 20px 0 50px;
   width: 100%;
 }
-.sidebar .bx-search{
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  font-size: 22px;
-  background: #1d1b31;
-  color: #FFF;
-}
-.sidebar.open .bx-search:hover{
-  background: #1d1b31;
-  color: #FFF;
-}
-.sidebar .bx-search:hover{
-  background: #FFF;
-  color: #11101d;
-}
 .sidebar li a{
   display: flex;
   height: 100%;
@@ -184,75 +167,25 @@
   font-size: 18px;
   border-radius: 12px;
 }
-.sidebar li.profile{
-  position: fixed;
-  height: 60px;
-  width: 78px;
-  left: 0;
-  bottom: -8px;
-  padding: 10px 14px;
-  background: #1d1b31;
-  transition: all 0.5s ease;
-  overflow: hidden;
-}
-.sidebar.open li.profile{
-  width: 250px;
-}
-.sidebar li .profile-details{
-  display: flex;
-  align-items: center;
-  flex-wrap: nowrap;
-}
-.sidebar li img{
-  height: 45px;
-  width: 45px;
-  object-fit: cover;
-  border-radius: 6px;
-  margin-right: 10px;
-}
-.sidebar li.profile .name,
-.sidebar li.profile .job{
-  font-size: 15px;
-  font-weight: 400;
-  color: #fff;
-  white-space: nowrap;
-}
-.sidebar li.profile .job{
-  font-size: 12px;
-}
-.sidebar .profile #log_out{
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  background: #1d1b31;
-  width: 100%;
-  height: 60px;
-  line-height: 60px;
-  border-radius: 0px;
-  transition: all 0.5s ease;
-}
-.sidebar.open .profile #log_out{
-  width: 50px;
-  background: none;
-}
 .home-section{
-  position: relative;
   background: #E4E9F7;
-  min-height: 100vh;
+  min-height: 200vh;
   top: 0;
-  left: 78px;
-  width: calc(100% - 78px);
+  margin-left: 85px;
+  padding-right: 20px;
+  width: 90%;
   transition: all 0.5s ease;
   z-index: 2;
   text-align: center;
-  color: red;
-  padding: 15px;
+  color: green;
+  height:100%;
 }
 .sidebar.open ~ .home-section{
   left: 250px;
-  width: calc(100% - 250px);
+  width: calc(100% - 260px);
+  margin-left: 260px;
 }
+
 .home-section .text{
   display: inline-block;
   color: #11101d;
@@ -266,65 +199,19 @@
   }
 }
 
+body {
+background-color: #E4E9F7;
+} 
 .collapsible {
-  background-color: yellow;
+  background-color: #f1f1f1;
   color: red;
   cursor: pointer;
   padding: 18px;
   width: 100%;
   border: none;
-  text-align: left;
+  text-align: center;
   outline: none;
   font-size: 15px;
-}
-
-.active, .collapsible:hover {
-  background-color: green;
-  color: yellow;
-}
-
-.content {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: yellow;
-  color: red;
-}
-
-div:focus {
-  outline: none;
-}
-
-.collapsible {
-  background-color: blue;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
-
-.collapsible1 {
-  background-color: blue;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
-
-.active, .collapsible:hover {
-  background-color: green;
-}
-
-.active, .collapsible1:hover {
-  background-color: green;
 }
 
 .content {
@@ -332,6 +219,180 @@ div:focus {
   display: none;
   overflow: hidden;
   background-color: #f1f1f1;
+  color: red;
+}
+
+body.dark-mode {
+  background-color: black;
+  color: cyan;
+}
+
+body.red-mode {
+  background-color: red;
+  color: white;
+}
+
+body.blue-mode {
+  background-color: blue;
+  color: cyan;
+}
+
+body.green-mode {
+  background-color: green;
+  color: yellow;
+}
+
+body.yellow-mode {
+  background-color: yellow;
+  color: green;
+}
+
+body.orange-mode {
+  background-color: orange;
+  color: blue;
+}
+
+body.purple-mode {
+  background-color: purple;
+  color: cyan;
+}
+
+body.magenta-mode {
+  background-color: magenta;
+  color: #1a2b22;
+}
+
+.dark-mode .home-section {
+  background-color: black;
+  color: cyan;
+}
+
+.red-mode .home-section {
+  background-color: red;
+  color: white;
+}
+
+.blue-mode .home-section {
+  background-color: blue;
+  color: cyan;
+}
+
+.green-mode .home-section {
+  background-color: green;
+  color: yellow;
+}
+
+.yellow-mode .home-section {
+  background-color: yellow;
+  color: green;
+}
+
+.orange-mode .home-section {
+  background-color: orange;
+  color: blue;
+}
+
+.purple-mode .home-section {
+  background-color: purple;
+  color: cyan;
+}
+
+.magenta-mode .home-section {
+  background-color: magenta;
+  color: #1a2b22;
+}
+.body {
+  background: #E4E9F7;
+  }
+  
+.button2 {
+float:left;
+background-color: black;
+  color: red;
+  padding: 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  color: yellow;
+}
+
+.overlay {
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+    width: 0;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0, 0.9);
+  background-color: yellow;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content{
+  position: relative;
+  top: 8%;
+  width: 90%;
+  margin-top: 30px;
+  text-align: center;
+  color:green;
+  font-size: 18px;
+  display: block;
+  transition: 0.3s;
+  padding:10px;
+  left: 70px;
+}
+
+.overlay-content p{
+padding:16px;
+text-align: center;
+padding-right: 20px;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: green;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+.collapsible2 {
+  cursor: pointer;
+  outline: none; 
+  font-size:30px;
+  background-color:cyan;
+  width:100%;
+  text-align:center;
+  color:purple;
+  padding:10px;
+  font-weight: bold;
+  border-style: solid;
+}
+
+.content2 {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: cyan;
+  color: purple;
+  font-weight: bold;
+  text-align:center;
+  font-size: 18px;
 }
 
 * {
@@ -355,251 +416,29 @@ div:focus {
   margin: 0;
 }
 
-#myUL li button {
+#myUL button {
   border: 1px solid #ddd;
   margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6;
+  background-color: yellow;
   padding: 12px;
   text-decoration: none;
   font-size: 18px;
-  color: black;
+  color: green;
   display: block
 }
 
-#myUL li button:hover:not(.header) {
+#myUL li a:hover:not(.header) {
   background-color: #eee;
 }
-
-* {
-  box-sizing: border-box;
-}
-
-#myInput1 {
-  background-image: url('/css/searchicon.png');
-  background-position: 10px 12px;
-  background-repeat: no-repeat;
-  width: 100%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
-}
-
-#myUL1 {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-#myUL1 li a {
-  border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: blue;
-  color: white;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  display: block
-}
-
-#myUL1 li a:hover:not(.header) {
-  background-color: green;
-}
-
-#myInput2 {
-  background-image: url('/css/searchicon.png');
-  background-position: 10px 12px;
-  background-repeat: no-repeat;
-  width: 100%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
-}
-
-#myUL2 {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-#myUL2 li a {
-  border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: blue;
-  color: white;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  display: block
-}
-
-#myUL2 li a:hover:not(.header) {
-  background-color: green;
-}
-
-#myInput3 {
-  background-image: url('/css/searchicon.png');
-  background-position: 10px 12px;
-  background-repeat: no-repeat;
-  width: 100%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
-}
-
-#myUL3 {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-#myUL3 li a {
-  border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: blue;
-  color: white;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  display: block
-}
-
-#myUL3 li a:hover:not(.header) {
-  background-color: green;
-}
-
-#myInput4 {
-  background-image: url('/css/searchicon.png');
-  background-position: 10px 12px;
-  background-repeat: no-repeat;
-  width: 100%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
-}
-
-#myUL4 {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-#myUL4 li a {
-  border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: blue;
-  color: white;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  display: block
-}
-
-#myUL4 li a:hover:not(.header) {
-  background-color: green;
-}
-
-#myInput5 {
-  background-image: url('/css/searchicon.png');
-  background-position: 10px 12px;
-  background-repeat: no-repeat;
-  width: 100%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
-}
-
-#myUL5 {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-#myUL5 li a {
-  border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: blue;
-  color: white;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  display: block
-}
-
-#myUL5 li a:hover:not(.header) {
-  background-color: green;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.navbar {
-  overflow: hidden;
-  background-color: yellow;  
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
-.navbar a {
-  float: left;
-  display: block;
-  color: red;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.navbar a:hover {
-  background-color: #04AA6D;
-  color: yellow;
-}
-
-.navbar a.active {
-  background-color: blue;
-  color: cyan;
-}
-
-.navbar .icon {
-  display: none;
-}
-
-@media screen and (max-width: 600px) {
-  .navbar a:not(:first-child) {display: none;}
-  .navbar a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .navbar.responsive .icon {
-    position: absolute;
-    right: 0;
-    bottom:0;
-  }
-  .navbar.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-
-} 
     </style>
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
 <body>
   <div class="sidebar">
     <div class="logo-details">
-        <div class="logo_name">OFUT App</div>
+        <div class="logo_name">OFUT</div>
         <i class='bx bx-menu' id="btn" ></i>
     </div>
     <ul class="nav-list">
@@ -618,92 +457,878 @@ body {
        <span class="tooltip">About</span>
      </li>
      <li>
+     <li>
+       <a href="documentation.html">
+         <i class='bx bxs-info-square'></i>
+         <span class="links_name">Documentation</span>
+       </a>
+       <span class="tooltip">Documentation</span>
+     </li>
+     <li>
+     <li>
+       <a href="project.html">
+         <i class='bx bxs-briefcase-alt-2'></i>
+         <span class="links_name">Project</span>
+       </a>
+       <span class="tooltip">Project</span>
+     </li>
+     <li>
        <a href="client.html">
-        <i class='bx bx-log-in'></i>
+        <i class='bx bx-user'></i>
          <span class="links_name">Client</span>
        </a>
        <span class="tooltip">Client</span>
      </li>
      <li>
-        <a href="tool.html">
-          <i class='bx bx-box'></i>
-          <span class="links_name">Tools</span>
-        </a>
-        <span class="tooltip">Tools</span>
-      </li>
+       <a href="web-app.html">
+        <i class='bx bx-log-in'></i>
+         <span class="links_name">Web App</span>
+       </a>
+       <span class="tooltip">Web App</span>
+     </li>
       <li>
-        <a href="information.html">
-          <i class='bx bxs-info-circle' ></i>
-          <span class="links_name">Information</span>
-        </a>
-        <span class="tooltip">Information</span>
-      </li>
-      <li>
-      <li>
-        <a href="editor.html">
-          <i class='bx bx-edit-alt' ></i>
-          <span class="links_name">Editor</span>
-        </a>
-        <span class="tooltip">Editor</span>
-      </li>
-      <li>
-        <a href="search-engine.html">
-          <i class='bx bx-search-alt-2' ></i>
-          <span class="links_name">Search Engine</span>
-        </a>
-        <span class="tooltip">Search</span>
-      </li>
+       <a href="api.html">
+         <i class='bx bx-extension'></i>
+         <span class="links_name">API</span>
+       </a>
+       <span class="tooltip">API</span>
+     </li>
+     <li>
+       <a href="store.html">
+         <i class='bx bx-store-alt'></i>
+         <span class="links_name">Store</span>
+       </a>
+       <span class="tooltip">Store</span>
+     </li>
+     <li>
     </ul>
   </div>
   <section class="home-section">
-    <div class="dropdown">
-      <button class="dropbtn">Search</button>
-      <div class="dropdown-content">
-        <a href="app-store.html">App Store</a>
-      <a href="arts.html">Arts</a>
-        <a href="audiobooks.html">Audiobooks</a>
-      <a href="video.html">Video</a>
-      <a href="business.html">Business</a>
-      <a href="book.html">Books</a>
-      <a href="search-engine.html">Search Engine</a>
-      <a href="project.html">Project</a>
-      <a href="games.html">Games</a>
-      <a href="weather.html">Weather</a>
-      <a href="music.html">Music</a>
-      </div>
-    </div>
-    <div class="navbar" id="myNavbar">
-  <a href="index.html" class="active"><i class='bx bx-home'></i> Home</a>
-  <a href="search.html"><i class='bx bx-search-alt-2'></i> Search</a>
-  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+  
+<br>
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <h1>Audio Recorder</h1>
+<p>Audio Recorder is a services provided by One Future Unified Team in One Future Unified Team Web App. You could record your voice and etc on Audio Recorder. Audio Recorder is supported in our free API too so everyone could use it on their site. </p>
+<p>In order to set up audio recorder on your website, please insert all of this codes in your websites. This codes is needed to be copied on your site through so it could work.</p>
+<p>Please insert this codes into your <code>head</code> section so it could proceed all the codes needed on our servers. It is require for it to work so do not missed it.</p>
+<div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FNew-Website%2Fblob%2Fbf1626431d38e9abd0e2c4c31baf267957f6d3df%2FAPI%2FServices%2FAudio%2520Recorder%2Fsrc.html&style=default&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script></div>
+<p>After that, please insert this HTML codes onto your site that you want the audio recorder to appear in, please insert it in the <code>body</code> section ONLY.</p>
+<div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FNew-Website%2Fblob%2Fmain%2FAPI%2FServices%2FAudio%2520Recorder%2Fcode.html&style=default&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script>
+  </div>
 </div>
-<br>
-      <div style="padding:16px;color:red;text-align:center;">
-<h2>App Store</h2>
+</div>
 
-<strong><p>Welcome to One Future Unified Team App Store! A place to search for apps and lookup for an app information. A place to discover amazing apps on the internet for free. A place to download apps onto your devices.</p></strong>
-<br>
-<button type="button" class="collapsible">App List</button>
-<div class="content">
-<h1>App List</h1>
-<p>Welcome to the app list in One Future Unified Team App Store. A directory of apps in One Future Unified Team App Store for everyone to discover for and know more about amazing apps. Check out all apps uploaded onto One Future Unified Team App Store here. </p>
-<br>
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for app names!" title="Type in a name">
+<div id="myNav1" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav1()">&times;</a>
+  <div class="overlay-content">
+    <h1>Business Search Engine</h1>
+    <p>Business Search Engine is a services provided by One Future Unified Team in One Future Unified Team Web App. You could search for business on One Future Unified Team Business Search Engine. </p>
+    
+    <p>In order to set up Business Search Engine on your website, please insert all of this codes in your websites. This codes is needed to be copied on your site through so it could work.</p>
+    
+    <p>Please insert this codes into your <code>head</code> section so it could proceed all the codes needed on our servers. It is require for it to work so do not missed it.</p>
+    <div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FNew-Website%2Fblob%2Fmain%2FAPI%2FServices%2FBusiness%2Fsrc.html&style=default&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script>
+    </div>
+    <p>After that, please insert this HTML codes onto your site that you want the business search engine to appear in, please insert it in the <code>body</code> section ONLY.</p>
+    <div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FNew-Website%2Fblob%2Fmain%2FAPI%2FServices%2FBusiness%2Fcode.html&style=default&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script>
+    
+  </div>
+</div>
+</div>
 
-<ul id="myUL">
-  <li><button type="button" class="collapsible">App 1</button><div class="content">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div></li>
-  <li><button type="button" class="collapsible">App 2</button><div class="content">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div></li>
-  <li><button type="button" class="collapsible">App 3</button><div class="content">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div></li>
+<div id="myNav2" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+  <div class="overlay-content">
+    <h1>Calculator</h1>
+    <p>Calculator is a services provided by One Future Unified Team in One Future Unified Team Web App. You could calculate simple and complex Math using One Future Unified Team Calculator on your website. </p>
+    
+    <p>In order to set up Calculator on your website, please insert all of this codes in your websites. This codes is needed to be copied on your site through so it could work.</p>
+    
+    <p>Please insert this codes into your <code>head</code> section so it could proceed all the codes needed on our servers. It is require for it to work so do not missed it.</p>
+    <div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FNew-Website%2Fblob%2Fmain%2FAPI%2FServices%2FCalculator%2Fsrc.html&style=default&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script>
+    </div>
+    <p>After that, please insert this HTML codes onto your site that you want the calculator to appear in, please insert it in the <code>body</code> section ONLY.</p>
+    <div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FNew-Website%2Fblob%2Fmain%2FAPI%2FServices%2FCalculator%2Fcode.html&style=default&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script>
+  </div>
+</div>
+</div>
+
+<div id="myNav3" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav4()">&times;</a>
+  <div class="overlay-content">
+    <h1>Calendar</h1>
+    <p>Calendar is a services provided by One Future Unified Team in One Future Unified Team Web App. You could add a calendar to your site for free with One Future Unified Team Calendar. </p>
+    
+    <p>In order to set up Calendar on your website, please insert all of this codes in your websites. This codes is needed to be copied on your site through so it could work.</p>
+    
+    <p>Please insert this codes into your <code>head</code> section so it could proceed all the codes needed on our servers. It is require for it to work so do not missed it.</p>
+    <div style="text-align:left;">
+    <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FAPI%2Fblob%2Fmain%2FCalendar%2Fsrc.html&style=github&showBorder=on&showLineNumbers=on&showCopy=on"></script>
+    </div>
+    <p>After that, please insert this HTML codes onto your site that you want the calendar to appear in, please insert it in the <code>body</code> section ONLY.</p>
+    <div style="text-align:left;">
+    <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FAPI%2Fblob%2Fmain%2FCalendar%2Fcode.html&style=github&showBorder=on&showLineNumbers=on&showCopy=on"></script>
+    </div>
+  </div>
+</div>
+</div>
+
+<div id="myNav4" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav5()">&times;</a>
+  <div class="overlay-content">
+    <h1>Camera</h1>
+    <p>Camera is a services provided by One Future Unified Team in One Future Unified Team Web App. You could add a camera to your site for free with One Future Unified Team Camera so other could take photo directly on your site. </p>
+    
+    <p>In order to set up Camera on your website, please insert all of this codes in your websites. This codes is needed to be copied on your site through so it could work.</p>
+    
+    <p>Please insert this codes into your <code>head</code> section so it could proceed all the codes needed on our servers. It is require for it to work so do not missed it.</p>
+    <div style="text-align:left;">
+    <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FAPI%2Fblob%2Fmain%2FCamera%2Fsrc.html&style=github&showBorder=on&showLineNumbers=on&showCopy=on"></script>
+    </div>
+    <p>After that, please insert this HTML codes onto your site that you want the camera to appear in, please insert it in the <code>body</code> section ONLY.</p>
+    <div style="text-align:left;">
+    <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FAPI%2Fblob%2Fmain%2FCamera%2Fcode.html&style=github&showBorder=on&showLineNumbers=on&showCopy=on"></script>    
+  </div>
+</div>
+</div>
+
+<div id="myNav5" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav6()">&times;</a>
+  <div class="overlay-content">
+    <h1>Code Editor</h1>
+    <p>Code Editor is a services provided by One Future Unified Team in One Future Unified Team Web App. You could add a code editor to your site for free with One Future Unified Team Code Editor so your users could edit their codes on your website.</p>
+    
+    <p>In order to set up Code Editor on your website, please insert all of this codes in your websites. This codes is needed to be copied on your site through so it could work.</p>
+    
+    <p>Please insert this codes into your <code>head</code> section so it could proceed all the codes needed on our servers. It is require for it to work so do not missed it.</p>
+    <div style="text-align:left;">
+    <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FAPI%2Fblob%2Fmain%2FCamera%2Fsrc.html&style=github&showBorder=on&showLineNumbers=on&showCopy=on"></script>
+    </div>
+    <p>After that, please insert this HTML codes onto your site that you want the code editor to appear in, please insert it in the <code>body</code> section ONLY.</p>
+    <div style="text-align:left;">
+    <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FAPI%2Fblob%2Fmain%2FCamera%2Fcode.html&style=github&showBorder=on&showLineNumbers=on&showCopy=on"></script>    
+  </div>
+</div>
+</div>
+
+<div id="myNav6" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav7()">&times;</a>
+  <div class="overlay-content">
+    <h1>Compass</h1>
+    <p>Compass is a services provided by One Future Unified Team in One Future Unified Team Web App. You could add a compass to your site for free with One Future Unified Team Compass. </p>
+    
+    <p>In order to set up Compass on your website, please insert all of this codes in your websites. This codes is needed to be copied on your site through so it could work.</p>
+    
+    <p>Please insert this codes into your <code>head</code> section so it could proceed all the codes needed on our servers. It is require for it to work so do not missed it.</p>
+    <div style="text-align:left;">
+    <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FAPI%2Fblob%2Fmain%2FCompass%2Fsrc.html&style=github&showBorder=on&showLineNumbers=on&showCopy=on"></script>
+    </div>
+    <p>After that, please insert this HTML codes onto your site that you want the compass to appear in, please insert it in the <code>body</code> section ONLY.</p>
+    <div style="text-align:left;">
+    <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FAPI%2Fblob%2Fmain%2FCompass%2Fcode.html&style=github&showBorder=on&showLineNumbers=on&showCopy=on"></script>
+    
+  </div>
+</div>
+</div>
+
+<div id="myNav7" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav7()">&times;</a>
+  <div class="overlay-content">
+    <h1>Contact</h1>
+    <p>Contact is a services provided by One Future Unified Team in One Future Unified Team Web App. You could add a contact management services to your site for free with One Future Unified Team Contact. Users could add a contact information into our services to store it so they could retrieve their friends/customers contact information in the future. It is all stored on your browser local storage so it wouldn't be available to anyone else too.</p>
+    
+    <p>In order to set up Contact on your website, please insert all of this codes in your websites. This codes is needed to be copied on your site through so it could work.</p>
+    
+    <p>Please insert this codes into your <code>head</code> section so it could proceed all the codes needed on our servers. It is require for it to work so do not missed it.</p>
+    <div style="text-align:left;">
+    <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FAPI%2Fblob%2Fmain%2FContact%2Fsrc.html&style=github&showBorder=on&showLineNumbers=on&showCopy=on"></script>
+    </div>
+    <p>After that, please insert this HTML codes onto your site that you want the contact to appear in, please insert it in the <code>body</code> section ONLY.</p>
+    <div style="text-align:left;">
+    <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FAPI%2Fblob%2Fmain%2FContact%2Fcode.html&style=github&showBorder=on&showLineNumbers=on&showCopy=on"></script>    
+  </div>
+</div>
+</div>
+
+<div id="myNav8" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav8()">&times;</a>
+  <div class="overlay-content">
+    <h1>Dictionary</h1>
+    <p>Dictionary is a services provided by One Future Unified Team in One Future Unified Team Web App. You could add a dictionary onto your site for free so users could search for a meaning of a word. </p>
+    
+    <p>In order to set up dictionary on your website, please insert all of this codes in your websites. This codes is needed to be copied on your site through so it could work.</p>
+    
+    <p>Please insert this codes into your <code>head</code> section so it could proceed all the codes needed on our servers. It is require for it to work so do not missed it.</p>
+    <div style="text-align:left;">
+    <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FAPI%2Fblob%2Fmain%2FDictionary%2Fsrc.html&style=github&showBorder=on&showLineNumbers=on&showCopy=on"></script>
+    </div>
+    <p>After that, please insert this HTML codes onto your site that you want the dictionary to appear in, please insert it in the <code>body</code> section ONLY.</p>
+    <div style="text-align:left;">
+    <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FAPI%2Fblob%2Fmain%2FDictionary%2Fcode.html&style=github&showBorder=on&showLineNumbers=on&showCopy=on"></script>
+  </div>
+</div>
+</div>
+
+<div id="myNav9" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav9()">&times;</a>
+  <div class="overlay-content">
+    <h1>Language Translator</h1>
+    <p>Language Translator is a services provided by One Future Unified Team in One Future Unified Team Web App. You could add a language translator onto your site for free so everyone could translate text directly on your site. </p>
+    
+    <p>In order to set up language translator on your website, please insert all of this codes in your websites. This codes is needed to be copied on your site through so it could work.</p>
+    
+    <p>Please insert this codes into your <code>head</code> section so it could proceed all the codes needed on our servers. It is require for it to work so do not missed it.</p>
+    <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FAPI%2Fblob%2Fmain%2FLanguage%2520Translator%2Fsrc.html&style=github&showBorder=on&showLineNumbers=on&showCopy=on"></script>
+    </div>
+    <p>After that, please insert this HTML codes onto your site that you want the language translator to appear in, please insert it in the <code>body</code> section ONLY.</p>
+    <div style="text-align:left;">
+    <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FAPI%2Fblob%2Fmain%2FLanguage%2520Translator%2Fcode.html&style=github&showBorder=on&showLineNumbers=on&showCopy=on"></script>    
+  </div>
+</div>
+</div>
+
+<div id="myNav10" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav10()">&times;</a>
+  <div class="overlay-content">
+    <h1>Map</h1>
+    <p>Map is a services provided by One Future Unified Team in One Future Unified Team Web App. You could add a map onto your site for free. </p>
+    
+    <p>In order to set up map on your website, please insert all of this codes in your websites. This codes is needed to be copied on your site through so it could work.</p>
+    
+    <p>Please insert this codes into your <code>head</code> section so it could proceed all the codes needed on our servers. It is require for it to work so do not missed it.</p>
+    <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FAPI%2Fblob%2Fmain%2FMap%2Fsrc.html&style=github&showBorder=on&showLineNumbers=on&showCopy=on"></script>
+    </div>
+    <p>After that, please insert this HTML codes onto your site that you want the map to appear in, please insert it in the <code>body</code> section ONLY.</p>
+    <div style="text-align:left;">
+    <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FAPI%2Fblob%2Fmain%2FMap%2Fcode.html&style=github&showBorder=on&showLineNumbers=on&showCopy=on"></script>    
+  </div>
+</div>
+</div>
+
+<div id="myNav11" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav11()">&times;</a>
+  <div class="overlay-content">
+    <h1>Notes</h1>
+    <p>Notes is a services provided by One Future Unified Team in One Future Unified Team Web App. You could add a notes onto your site for free so everyone could add notes directly on your site. </p>
+    
+    <p>In order to set up notes on your website, please insert all of this codes in your websites. This codes is needed to be copied on your site through so it could work.</p>
+    
+    <p>Please insert this codes into your <code>head</code> section so it could proceed all the codes needed on our servers. It is require for it to work so do not missed it.</p>
+    <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FAPI%2Fblob%2Fmain%2FNotes%2Fsrc.html&style=github&showBorder=on&showLineNumbers=on&showCopy=on"></script>
+    </div>
+    <p>After that, please insert this HTML codes onto your site that you want the notes to appear in, please insert it in the <code>body</code> section ONLY.</p>
+    <div style="text-align:left;">
+    <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FAPI%2Fblob%2Fmain%2FNotes%2Fcode.html&style=github&showBorder=on&showLineNumbers=on&showCopy=on"></script>    
+  </div>
+</div>
+</div>
+
+<div id="myNav12" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav12()">&times;</a>
+  <div class="overlay-content">
+    <h1>Photo Editor</h1>
+    <p>Photo Editor is a services provided by One Future Unified Team in One Future Unified Team Web App. You could edit photo on Photo Editor. Photo Editor is supported in our free API too so everyone could use it on their site. </p>
+    <p>In order to set up photo editor on your website, please insert all of this codes in your websites. This codes is needed to be copied on your site through so it could work.</p>
+    <p>Please insert this codes into your <code>head</code> section so it could proceed all the codes needed on our servers. It is require for it to work so do not missed it.</p>
+    <div style="text-align:left;">
+    <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FAPI%2Fblob%2Fmain%2FPhoto%2520Editor%2Fsrc.html&style=github&showBorder=on&showLineNumbers=on&showCopy=on"></script>
+    </div>
+    <p>After that, please insert this HTML codes onto your site that you want the photo editor to appear in, please insert it in the <code>body</code> section ONLY.</p>
+    <div style="text-align:left;">
+    <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FAPI%2Fblob%2Fmain%2FPhoto%2520Editor%2Fcode.html&style=github&showBorder=on&showLineNumbers=on&showCopy=on"></script>    
+  </div>
+</div>
+</div>
+
+<div id="myNav13" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav13()">&times;</a>
+  <div class="overlay-content">
+    <h1>Photo Storage</h1>
+    <p>Photo Storage is a services provided by One Future Unified Team in One Future Unified Team Web App. You could upload and store your images on Photo Storage. Photo Storage is supported in our free API too so everyone could use it on their site. </p>
+    <p>In order to set up photo storage on your website, please insert all of this codes in your websites. This codes is needed to be copied on your site through so it could work.</p>
+    <p>Please insert this codes into your <code>head</code> section so it could proceed all the codes needed on our servers. It is require for it to work so do not missed it.</p>
+    <div style="text-align:left;">
+    <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FAPI%2Fblob%2Fmain%2FPhoto%2520Storage%2Fsrc.html&style=github&showBorder=on&showLineNumbers=on&showCopy=on"></script>
+    </div>
+    <p>After that, please insert this HTML codes onto your site that you want the photo storage to appear in, please insert it in the <code>body</code> section ONLY.</p>
+    <div style="text-align:left;">
+    <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FAPI%2Fblob%2Fmain%2FPhoto%2520Storage%2Fcode.html&style=github&showBorder=on&showLineNumbers=on&showCopy=on"></script>    
+  </div>
+</div>
+</div>
+
+<div id="myNav14" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav14()">&times;</a>
+  <div class="overlay-content">
+    <h1>QR Code Generator</h1>
+    <p>QR Code Generator is a services provided by One Future Unified Team in One Future Unified Team Web App. You could generate QR Code on QR Code Generator. QR Code Generator is supported in our free API too so everyone could use it on their site. </p>
+    <p>In order to set up qr code generator on your website, please insert all of this codes in your websites. This codes is needed to be copied on your site through so it could work.</p>
+    <p>Please insert this codes into your <code>head</code> section so it could proceed all the codes needed on our servers. It is require for it to work so do not missed it.</p>
+    <div style="text-align:left;">
+    <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FAPI%2Fblob%2Fmain%2FQR%2520Code%2520Generator%2Fsrc.html&style=github&showBorder=on&showLineNumbers=on&showCopy=on"></script>
+    </div>
+    <p>After that, please insert this HTML codes onto your site that you want the QR Code Generator to appear in, please insert it in the <code>body</code> section ONLY.</p>
+    <div style="text-align:left;">
+    <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FAPI%2Fblob%2Fmain%2FQR%2520Code%2520Generator%2Fcode.html&style=github&showBorder=on&showLineNumbers=on&showCopy=on"></script>      
+  </div>
+</div>
+</div>
+
+<div id="myNav15" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav15()">&times;</a>
+  <div class="overlay-content">
+    <h1>QR Code Reader</h1>
+    <p>QR Code Reader is a services provided by One Future Unified Team in One Future Unified Team Web App. You could read QR Code on QR Code Reader. QR Code Reader is supported in our free API too so everyone could use it on their site. </p>
+    <p>In order to set up qr code reader on your website, please insert all of this codes in your websites. This codes is needed to be copied on your site through so it could work.</p>
+    <p>Please insert this codes into your <code>head</code> section so it could proceed all the codes needed on our servers. It is require for it to work so do not missed it.</p>
+    <div style="text-align:left;">
+    <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FAPI%2Fblob%2Fmain%2FQR%2520Code%2520Reader%2Fsrc.html&style=github&showBorder=on&showLineNumbers=on&showCopy=on"></script>
+    </div>
+    <p>After that, please insert this HTML codes onto your site that you want the QR Code Reader to appear in, please insert it in the <code>body</code> section ONLY.</p>
+    <div style="text-align:left;">
+    <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FAPI%2Fblob%2Fmain%2FQR%2520Code%2520Reader%2Fcode.html&style=github&showBorder=on&showLineNumbers=on&showCopy=on"></script>  
+  </div>
+</div>
+</div>
+
+<div id="myNav16" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav16()">&times;</a>
+  <div class="overlay-content">
+    <h1>Reviews</h1>
+    <p>Reviews is a services provided by One Future Unified Team in One Future Unified Team Web App. You could add a reviews onto your site for free so users could search for product reviews directly on your site. </p>
+    
+    <p>In order to set up review on your website, please insert all of this codes in your websites. This codes is needed to be copied on your site through so it could work.</p>
+    
+    <p>Please insert this codes into your <code>head</code> section so it could proceed all the codes needed on our servers. It is require for it to work so do not missed it.</p>
+    <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FAPI%2Fblob%2Fmain%2FSearch%2Fsrc.html&style=github&showBorder=on&showLineNumbers=on&showCopy=on"></script>
+    </div>
+    <p>After that, please insert this HTML codes onto your site that you want the reviews to appear in, please insert it in the <code>body</code> section ONLY.</p>
+    <div style="text-align:left;">
+    <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FAPI%2Fblob%2Fmain%2FDictionary%2Fcode.html&style=github&showBorder=on&showLineNumbers=on&showCopy=on"></script>    
+  </div>
+</div>
+</div>
+
+<div id="myNav17" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav17()">&times;</a>
+  <div class="overlay-content">
+    <h1>Search Engine</h1>
+    <p>Search is a services provided by One Future Unified Team in One Future Unified Team Web App. You could add a search engine onto your site for free so users could search the internet for free on your website. </p>
+    
+    <p>In order to set up search on your website, please insert all of this codes in your websites. This codes is needed to be copied on your site through so it could work.</p>
+    
+    <p>Please insert this codes into your <code>head</code> section so it could proceed all the codes needed on our servers. It is require for it to work so do not missed it.</p>
+    <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FAPI%2Fblob%2Fmain%2FSearch%2Fsrc.html&style=github&showBorder=on&showLineNumbers=on&showCopy=on"></script>
+    </div>
+    <p>After that, please insert this HTML codes onto your site that you want the search engine to appear in, please insert it in the <code>body</code> section ONLY.</p>
+    <div style="text-align:left;">
+    <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FAPI%2Fblob%2Fmain%2FDictionary%2Fcode.html&style=github&showBorder=on&showLineNumbers=on&showCopy=on"></script>   
+  </div>
+</div>
+</div>
+
+<div id="myNav18" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav18()">&times;</a>
+  <div class="overlay-content">
+    <h1>Stocks</h1>
+    <p>Stocks is a services provided by One Future Unified Team in One Future Unified Team Web App. You could add a stocks onto your site for free so users could get live stocks information directly on your site. </p>
+    
+    <p>In order to set up stocks on your website, please insert all of this codes in your websites. This codes is needed to be copied on your site through so it could work.</p>
+    
+    <p>Please insert this HTML codes onto your site that you want the reviews to appear in, please insert it in the <code>body</code> section ONLY.</p>
+    <div style="text-align:left;">
+    <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FAPI%2Fblob%2Fmain%2FStocks%2Fcode.html&style=github&showBorder=on&showLineNumbers=on&showCopy=on"></script>    
+  </div>
+</div>
+</div>
+
+<div id="myNav19" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav19()">&times;</a>
+  <div class="overlay-content">
+    <h1>Text Editor</h1>
+    <p>Text Editor is a services provided by One Future Unified Team in One Future Unified Team Web App. You could edit text on Text Editor. Text Editor is supported in our free API too so everyone could use it on their site. </p>
+    <p>In order to set up text editor on your website, please insert all of this codes in your websites. This codes is needed to be copied on your site through so it could work.</p>
+    <p>Please insert this codes into your <code>head</code> section so it could proceed all the codes needed on our servers. It is require for it to work so do not missed it.</p>
+    <div style="text-align:left;">
+    <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FAPI%2Fblob%2Fmain%2FText%2520Editor%2Fsrc.html&style=github&showBorder=on&showLineNumbers=on&showCopy=on"></script>
+    </div>
+    <p>After that, please insert this HTML codes onto your site that you want the text editor to appear in, please insert it in the <code>body</code> section ONLY.</p>
+    <div style="text-align:left;">
+    <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FSoftware-and-Website-Developer-Team%2FAPI%2Fblob%2Fmain%2FText%2520Editor%2Fcode.html&style=github&showBorder=on&showLineNumbers=on&showCopy=on"></script>    
+  </div>
+</div>
+</div>
+
+<div id="myNav20" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav20()">&times;</a>
+  <div class="overlay-content">
+    <h1>Text to Speech</h1>
+    <p>Text to Speech is a services provided by One Future Unified Team in One Future Unified Team Web App. You could text to speech on Text to Speech. Text to Speech is supported in our free API too so everyone could use it on their site. </p>
+    <p>In order to set up Text to Speech on your website, please insert all of this codes in your websites. This codes is needed to be copied on your site through so it could work.</p>
+    <p>Please insert this codes into your <code>head</code> section so it could proceed all the codes needed on our servers. It is require for it to work so do not missed it.</p>
+    <div style="text-align:left;">
+    <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FAPI%2Fblob%2Fmain%2FText%2520to%2520Speech%2Fsrc.html&style=github&showBorder=on&showLineNumbers=on&showCopy=on"></script>
+    </div>
+    <p>After pasting the code above. please insert the code where you would like text to speech to appear in. Please insert in the <code>body</code> section ONLY.</p>
+    <div style="text-align:left;">
+    <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FAPI%2Fblob%2Fmain%2FText%2520to%2520Speech%2Fcode.html&style=github&showBorder=on&showLineNumbers=on&showCopy=on"></script>
+  </div>
+</div>
+</div>
+
+<div id="myNav21" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav21()">&times;</a>
+  <div class="overlay-content">
+    <h1>To Do</h1>
+    <p>To Do is a services provided by One Future Unified Team in One Future Unified Team Web App. You could list out all of your to do list on To Do. To Do is supported in our free API too so everyone could use it on their site. </p>
+    <p>In order to set up To Do on your website, please insert all of this codes in your websites. This codes is needed to be copied on your site through so it could work.</p>
+    <p>Please insert this codes into your <code>head</code> section so it could proceed all the codes needed on our servers. It is require for it to work so do not missed it.</p>
+    <div style="text-align:left;">
+    <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FAPI%2Fblob%2Fmain%2FTo%2520Do%2Fsrc.html&style=github&showBorder=on&showLineNumbers=on&showCopy=on"></script>
+    </div>
+    <p>After that, please insert this HTML codes onto your site that you want the to do to appear in, please insert it in the <code>body</code> section ONLY.</p>
+    <div style="text-align:left;">
+    <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified- Team%2FAPI%2Fblob%2Fmain%2FTo%2520Do%2Fcode.html&style=github&showBorder=on&showLineNumbers=on&showCopy=on"></script>     
+  </div>
+</div>
+</div>
+
+<div id="myNav22" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav22()">&times;</a>
+  <div class="overlay-content">
+    <h1>Weather</h1>
+    <p>Weather is a services provided by One Future Unified Team in One Future Unified Team Web App. You could check out the latest weather from all location in the world on Weather. Weather is supported in our free API too so everyone could use it on their site. </p>
+    <p>In order to set up Weather on your website, please insert all of this codes in your websites. This codes is needed to be copied on your site through so it could work.</p>
+    <p>Please insert this codes into your <code>head</code> section so it could proceed all the codes needed on our servers. It is require for it to work so do not missed it.</p>
+    <div style="text-align:left;">
+    <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FAPI%2Fblob%2Fmain%2FWeather%2Fsrc.html&style=github&showBorder=on&showLineNumbers=on&showCopy=on"></script>
+    </div>
+    <p>After that, please insert this HTML codes onto your site that you want the weather to appear in, please insert it in the <code>body</code> section ONLY.</p>
+    <div style="text-align:left;">
+    <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FAPI%2Fblob%2Fmain%2FWeather%2Fcode.html&style=github&showBorder=on&showLineNumbers=on&showCopy=on"></script>    
+  </div>
+</div>
+</div>
+
+<div id="myNav23" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav23()">&times;</a>
+  <div class="overlay-content">
+    <h1>Whiteboard</h1>
+    <p>Whiteboard is a services provided by One Future Unified Team in One Future Unified Team Web App. You could draw on your browser with Whiteboard. Whiteboard is supported in our free API too so everyone could use it on their site. </p>
+    <p>In order to set up Whiteboard on your website, please insert all of this codes in your websites. This codes is needed to be copied on your site through so it could work.</p>
+    <p>Please insert this codes into your <code>head</code> section so it could proceed all the codes needed on our servers. It is require for it to work so do not missed it.</p>
+    <div style="text-align:left;">
+    <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FAPI%2Fblob%2Fmain%2FWhiteboard%2Fsrc.html&style=github&showBorder=on&showLineNumbers=on&showCopy=on"></script>
+    </div>
+    <p>After that, please insert this HTML codes onto your site that you want the whiteboard to appear in, please insert it in the <code>body</code> section ONLY.</p>
+    <div style="text-align:left;">
+    <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FAPI%2Fblob%2Fmain%2FWhiteboard%2Fcode.html&style=github&showBorder=on&showLineNumbers=on&showCopy=on"></script>    
+  </div>
+</div>
+</div>
+
+<h1>API</h1>
+<p>One Future Unified Team provided a tons of services in our software and websites like in One Future Unified Team Store and One Future Unified Team App. One Future Unified Team API is an Application Programming Interface of One Future Unified Team. One Future Unified Team API provide support for all developer to implement One Future Unified Team services on our website and software onto your website without developing the features itself and for free.</p>
+<br>
+<hr>
+<br>
+<h2>Open Source</h2>
+<p>One Future Unified Team API is an open source API ( Application Programming Interface ). Everyone could view, read and study all of One Future Unified Team API source codes on our official Github repository. One Future Unified Team API is built using HTML, CSS and vanilla JavaScript unlike any traditional API too and licensed under MIT.</p>
+<br>
+<hr>
+<br>
+<h2>Free</h2>
+<p>One Future Unified Team API is free for everyone to use and enjoy. Everyone could use One Future Unified Team API to implement services provided by One Future Unified Team for free with no hidden fees. One Future Unified Team API is built for everyone to use and not for earning money from developers and website owner.</p>
+<br>
+<hr>
+<br>
+<h1>Services</h1>
+<p>One Future Unified Team provided a tons of services in our software and websites like in One Future Unified Team Store and One Future Unified Team App. We would list out all services of One Future Unified Team in this page with some services supported and some services not supported in One Future Unified Team API.</p>
+<br>
+<p><strong>Here is all of the services provided by One Future Unified Team that is supported in One Future Unified Team:</strong></p>
+<ul>
+  <li>Ads</li>
+  <li>Audio Recorder</li>
+  <li>Business</li>
+  <li>Calculator</li>
+  <li>Calendar</li>
+  <li>Camera</li>
+  <li>Code Editor</li>
+  <li>Compass</li>
+  <li>Contact</li>
+  <li>Dictionary</li>
+  <li>Language Translator</li>
+  <li>Map</li>
+  <li>Notes</li>
+  <li>Photo Editor</li>
+  <li>Photo Storage</li>
+  <li>QR Code Generator</li>
+  <li>QR Code Reader</li>
+  <li>Reviews</li>
+  <li>Search</li>
+  <li>Stocks</li>
+  <li>Text Editor</li>
+  <li>Text to Speech</li>
+  <li>To Do</li>
+  <li>Weather</li>
+  <li>Whiteboard</li>
 </ul>
-
+<br>
+<p><strong>Here is all of the services provided by One Future Unified Team that is not supported in One Future Unified Team:</strong></p>
+<ul>
+  <li>Project</li>
+  <li>Website</li>
+  <li>Video</li>
+  <li>Discoserver</li>
+  <li>Music</li>
+  <li>Books</li>
+  <li>Store</li>
+  <li>News</li>
+  <li>Social</li>
+  <li>Meeting</li>
+  <li>Arts</li>
+  <li>Repository</li>
+  <li>InfoHQ</li>
+</ul>
+<br>
+<hr>
+<br>
+<h2>Services API</h2>
+<br>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav()" id="audio-recorder">Audio Recorder</div>
+<br>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav1()" id="business">Business</div>
+<br>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav2()" id="calculator">Calculator</div>
+<br>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav3()" id="calendar">Calendar</div>
+<br>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav4()" id="camera">Camera</div>
+<br>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav5()" id="code-editor">Code Editor</div>
+<br>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav6()" id="compass">Compass</div>
+<br>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav7()" id="contact">Contact</div>
+<br>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav8()" id="dictionary">Dictionary</div>
+<br>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav9()" id="language-translator">Language Translator</div>
+<br>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav10()" id="map">Map</div>
+<br>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav11()" id="notes">Notes</div>
+<br>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav12()" id="photo-editor">Photo Editor</div>
+<br>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav13()" id="photo-storage">Photo Storage</div>
+<br>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav14()" id="qr-code-generator">QR Code Generator</div>
+<br>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav15()" id="qr-code-reader">QR Code Reader</div>
+<br>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav16()" id="reviews">Reviews</div>
+<br>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav17()" id="search">Search</div>
+<br>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav18()" id="stocks">Stocks</div>
+<br>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav19()" id="text-editor">Text Editor</div>
+<br>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav20()" id="text-to-speech">Text To Speech</div>
+<br>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav21()" id="to-do">To Do</div>
+<br>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav22()" id="weather">Weather</div>
+<br>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav23()" id="whiteboard">Whiteboard</div>
+<br>
 <script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+
+function openNav1() {
+  document.getElementById("myNav1").style.width = "100%";
+}
+
+function closeNav1() {
+  document.getElementById("myNav1").style.width = "0%";
+}
+
+function openNav2() {
+  document.getElementById("myNav2").style.width = "100%";
+}
+
+function closeNav2() {
+  document.getElementById("myNav2").style.width = "0%";
+}
+
+function openNav3() {
+  document.getElementById("myNav3").style.width = "100%";
+}
+
+function closeNav3() {
+  document.getElementById("myNav3").style.width = "0%";
+}
+
+function openNav4() {
+  document.getElementById("myNav4").style.width = "100%";
+}
+
+function closeNav4() {
+  document.getElementById("myNav4").style.width = "0%";
+}
+
+function openNav5() {
+  document.getElementById("myNav5").style.width = "100%";
+}
+
+function closeNav5() {
+  document.getElementById("myNav5").style.width = "0%";
+}
+
+function openNav6() {
+  document.getElementById("myNav6").style.width = "100%";
+}
+
+function closeNav6() {
+  document.getElementById("myNav6").style.width = "0%";
+}
+
+function openNav7() {
+  document.getElementById("myNav7").style.width = "100%";
+}
+
+function closeNav7() {
+  document.getElementById("myNav7").style.width = "0%";
+}
+
+function openNav8() {
+  document.getElementById("myNav8").style.width = "100%";
+}
+
+function closeNav8() {
+  document.getElementById("myNav8").style.width = "0%";
+}
+
+function openNav9() {
+  document.getElementById("myNav9").style.width = "100%";
+}
+
+function closeNav9() {
+  document.getElementById("myNav9").style.width = "0%";
+}
+
+function openNav10() {
+  document.getElementById("myNav10").style.width = "100%";
+}
+
+function closeNav10() {
+  document.getElementById("myNav10").style.width = "0%";
+}
+
+function openNav11() {
+  document.getElementById("myNav11").style.width = "100%";
+}
+
+function closeNav11() {
+  document.getElementById("myNav11").style.width = "0%";
+}
+
+function openNav12() {
+  document.getElementById("myNav12").style.width = "100%";
+}
+
+function closeNav12() {
+  document.getElementById("myNav12").style.width = "0%";
+}
+
+function openNav13() {
+  document.getElementById("myNav13").style.width = "100%";
+}
+
+function closeNav13() {
+  document.getElementById("myNav13").style.width = "0%";
+}
+
+function openNav14() {
+  document.getElementById("myNav14").style.width = "100%";
+}
+
+function closeNav14() {
+  document.getElementById("myNav14").style.width = "0%";
+}
+
+function openNav15() {
+  document.getElementById("myNav15").style.width = "100%";
+}
+
+function closeNav15() {
+  document.getElementById("myNav15").style.width = "0%";
+}
+
+function openNav16() {
+  document.getElementById("myNav16").style.width = "100%";
+}
+
+function closeNav16() {
+  document.getElementById("myNav16").style.width = "0%";
+}
+
+function openNav17() {
+  document.getElementById("myNav17").style.width = "100%";
+}
+
+function closeNav17() {
+  document.getElementById("myNav17").style.width = "0%";
+}
+
+function openNav18() {
+  document.getElementById("myNav18").style.width = "100%";
+}
+
+function closeNav18() {
+  document.getElementById("myNav18").style.width = "0%";
+}
+
+function openNav19() {
+  document.getElementById("myNav19").style.width = "100%";
+}
+
+function closeNav19() {
+  document.getElementById("myNav19").style.width = "0%";
+}
+
+function openNav20() {
+  document.getElementById("myNav20").style.width = "100%";
+}
+
+function closeNav20() {
+  document.getElementById("myNav20").style.width = "0%";
+}
+
+function openNav21() {
+  document.getElementById("myNav21").style.width = "100%";
+}
+
+function closeNav21() {
+  document.getElementById("myNav21").style.width = "0%";
+}
+
+function openNav22() {
+  document.getElementById("myNav22").style.width = "100%";
+}
+
+function closeNav22() {
+  document.getElementById("myNav22").style.width = "0%";
+}
+
+function openNav21() {
+  document.getElementById("myNav23").style.width = "100%";
+}
+
+function closeNav21() {
+  document.getElementById("myNav23").style.width = "0%";
+}
+</script>
+<br><br>
+  <hr>
+  <br>
+  <h1>Themes</h1>
+<p>You could customise the themes of One Future Unified Team into a colour that you prefer. Select and choose from the color set below to make One Future Unified Team UI into your color preference.</p>
+<br>
+<div style="float:left;text-align:center;padding:10px;">
+<button onclick="myFunction()" style="background-color: black;" class="button2"></button>
+<button onclick="myFunction2()" style="background-color: red;" class="button2"></button>
+<button onclick="myFunction3()" style="background-color: blue;" class="button2"></button>
+<button onclick="myFunction4()" style="background-color: green;" class="button2"></button>
+<button onclick="myFunction5()" style="background-color: yellow;" class="button2"></button> 
+<button onclick="myFunction6()" style="background-color: orange;" class="button2"></button>
+<button onclick="myFunction7()" style="background-color: purple;" class="button2"></button>
+<button onclick="myFunction8()" style="background-color: magenta;" class="button2"></button>
+</div>
+<script>
+
 function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+
+function myFunction2() {
+   var element = document.body;
+   element.classList.toggle("red-mode");
+}
+
+function myFunction3() {
+   var element = document.body;
+   element.classList.toggle("blue-mode");
+}
+
+function myFunction4() {
+   var element = document.body;
+   element.classList.toggle("green-mode");
+}
+
+function myFunction5() {
+   var element = document.body;
+   element.classList.toggle("yellow-mode");
+}
+
+function myFunction6() {
+   var element = document.body;
+   element.classList.toggle("orange-mode");
+}
+
+function myFunction7() {
+   var element = document.body;
+   element.classList.toggle("purple-mode");
+}
+
+function myFunction8() {
+   var element = document.body;
+   element.classList.toggle("magenta-mode");
+}
+</script>
+  </section>
+
+  <script>
+    let sidebar = document.querySelector(".sidebar");
+let closeBtn = document.querySelector("#btn");
+let searchBtn = document.querySelector(".bx-search");
+
+closeBtn.addEventListener("click", ()=>{
+  sidebar.classList.toggle("open");
+  menuBtnChange();//calling the function(optional)
+});
+
+searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search icons
+  sidebar.classList.toggle("open");
+  menuBtnChange(); //calling the function(optional)
+});
+
+// following are the code to change sidebar button(optional)
+function menuBtnChange() {
+ if(sidebar.classList.contains("open")){
+   closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the icons class
+ }else {
+   closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the icons class
+ }
+}
+
+function myFunction5() {
     var input, filter, ul, li, a, i, txtValue;
     input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
@@ -719,173 +1344,7 @@ function myFunction() {
         }
     }
 }
-
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
-    }
-  });
-}
-</script>
-</div>
-<button type="button" class="collapsible1">Category</button>
-<div class="content">
-<h1>Category</h1>
-<p><strong>Welcome to the category list of One Future Unified Team! A list of apps categoried into many categories by One Future Unified Team.Check out the category you like with all the apps included.</strong></p> 
-<button type="button" class="collapsible">Popular Apps</button>
-<div class="content">
-<input type="text" id="myInput1" onkeyup="myFunction2()" placeholder="Search for app names.." title="Type in a name">
-
-<ul id="myUL1">
-  <li><a href="#">NoneA</a></li>
-  <li><a href="#">NoneB</a></li>
-
-  <li><a href="#">NoneC</a></li>
-  <li><a href="#">NoneD</a></li>
-
-  <li><a href="#">NoneE</a></li>
-  <li><a href="#">NoneF</a></li>
-  <li><a href="#">NoneG</a></li>
-</ul>
-
-</div>
-<button type="button" class="collapsible">Trending Apps</button>
-<div class="content">
-<input type="text" id="myInput2" onkeyup="myFunction3()" placeholder="Search for app names.." title="Type in a name">
-
-<ul id="myUL2">
-  <li><a href="#">NoneA</a></li>
-  <li><a href="#">NoneB</a></li>
-
-  <li><a href="#">NoneC</a></li>
-  <li><a href="#">NoneD</a></li>
-
-  <li><a href="#">NoneE</a></li>
-  <li><a href="#">NoneF</a></li>
-  <li><a href="#">NoneG</a></li>
-</ul>
-</div>
-<button type="button" class="collapsible">Gaming</button>
-<div class="content">
-<input type="text" id="myInput3" onkeyup="myFunction4()" placeholder="Search for app names.." title="Type in a name">
-
-<ul id="myUL3">
-  <li><a href="#">NoneA</a></li>
-  <li><a href="#">NoneB</a></li>
-
-  <li><a href="#">NoneC</a></li>
-  <li><a href="#">NoneD</a></li>
-
-  <li><a href="#">NoneE</a></li>
-  <li><a href="#">NoneF</a></li>
-  <li><a href="#">NoneG</a></li>
-</ul>
-</div>
-<button type="button" class="collapsible">Tools</button>
-<div class="content">
-<input type="text" id="myInput4" onkeyup="myFunction5()" placeholder="Search for app names.." title="Type in a name">
-
-<ul id="myUL4">
-  <li><a href="#">NoneA</a></li>
-  <li><a href="#">NoneB</a></li>
-
-  <li><a href="#">NoneC</a></li>
-  <li><a href="#">NoneD</a></li>
-
-  <li><a href="#">NoneE</a></li>
-  <li><a href="#">NoneF</a></li>
-  <li><a href="#">NoneG</a></li>
-</ul>
-</div>
-<button type="button" class="collapsible">Social Media</button>
-<div class="content">
-<input type="text" id="myInput5" onkeyup="myFunction6()" placeholder="Search for app names.." title="Type in a name">
-
-<ul id="myUL5">
-  <li><a href="#">NoneA</a></li>
-  <li><a href="#">NoneB</a></li>
-
-  <li><a href="#">NoneC</a></li>
-  <li><a href="#">NoneD</a></li>
-
-  <li><a href="#">NoneE</a></li>
-  <li><a href="#">NoneF</a></li>
-  <li><a href="#">NoneG</a></li>
-</ul>
-</div>
-
-<script>
-var coll = document.getElementsByClassName("collapsible1");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
-    }
-  });
-}
-</script>
-</div>
-<a href="search.html"><button type="button" class="collapsible">Search</button></a>
-
-</div>
-<script>
-function myFunction() {
-  var x = document.getElementById("myNavbar");
-  if (x.className === "navbar") {
-    x.className += " responsive";
-  } else {
-    x.className = "navbar";
-  }
-}
-</script>
-  </section>
-
-  <script>
-    let sidebar = document.querySelector(".sidebar");
-let closeBtn = document.querySelector("#btn");
-let searchBtn = document.querySelector(".bx-search");
-
-closeBtn.addEventListener("click", ()=>{
-  sidebar.classList.toggle("open");
-  menuBtnChange();//calling the function(optional)
-});
-
-searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
-  sidebar.classList.toggle("open");
-  menuBtnChange(); //calling the function(optional)
-});
-
-// following are the code to change sidebar button(optional)
-function menuBtnChange() {
- if(sidebar.classList.contains("open")){
-   closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
- }else {
-   closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
- }
-}
-
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
   </script>
+
 </body>
 </html>
