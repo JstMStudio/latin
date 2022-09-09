@@ -430,6 +430,39 @@ padding-right: 20px;
 #myUL li a:hover:not(.header) {
   background-color: #eee;
 }
+
+.collapsible {
+  background-color: cyan;
+  color: green;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+  font-weight: bold;
+}
+.content1 {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: cyan;
+  color: red;
+}
+
+.link {
+  background-color: cyan;
+  color: green;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+  font-weight: bold;
+}
     </style>
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -509,36 +542,113 @@ padding-right: 20px;
 <div id="myNav" class="overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <div class="overlay-content">
-
+<h2>Requests</h2>
+<p>InfoHQ is open for everyone to become a maintainer of InfoHQ. You could become a maintainer by creating an InfoHQ here by using our official Google Form <a href="https://forms.gle/jA19y1JtQhAZdTWG9">here</a>. Each application request for a new InfoHQ hosted by One Future Unified Team in our Google Form will be reviewed by a team member or volunteer without 7 days. </p>
+<br>
+<p>InfoHQ currently also provided many awesome plugins as well. Users could request a plugin features to their InfoHQ by contacting One Future Unified Team which will be reviewed by a team member or volunteer without 7 business day. Please fill this Google Form <a href="https://docs.google.com/forms/d/e/1FAIpQLSchA_ev1QejjDOfgYln5ANHUcYwfL6C8YTRuEzr19jqgdmNdA/viewform">here</a> to request a plugin feature.</p>
   </div>
 </div>
 
 <div id="myNav1" class="overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav1()">&times;</a>
   <div class="overlay-content">
-
+<h1>Discussion</h1>
+   <p>Welcome to Info HQ Discussion! The official discussion place provided by One Future Unified Team for everyone to discuss about the InfoHQ. A discussion place for everyone to discuss about Info HQ. </p>
+   <br><br>
+   <div id="graphcomment"></div>
+   <script type="text/javascript">
+   
+     /* - - - CONFIGURATION VARIABLES - - - */
+   
+     var __semio__params = {
+       graphcommentId: "Official-Websites", // make sure the id is yours
+   
+       behaviour: {
+         // HIGHLY RECOMMENDED
+         //  uid: "Wiki-Discussion", // uniq identifer for the comments thread on your page (ex: your page id)
+       },
+   
+       // configure your variables here
+   
+     }
+   
+     /* - - - DON'T EDIT BELOW THIS LINE - - - */
+   
+     function __semio__onload() {
+       __semio__gc_graphlogin(__semio__params)
+     }
+   
+   
+     (function() {
+       var gc = document.createElement('script'); gc.type = 'text/javascript'; gc.async = true;
+       gc.onload = __semio__onload; gc.defer = true; gc.src = 'https://integration.graphcomment.com/gc_graphlogin.js?' + Date.now();
+       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(gc);
+     })();
+     
+   
+   </script>
   </div>
 </div>
 
 <div id="myNav2" class="overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
   <div class="overlay-content">
+<h1>FAQ</h1>
+   <p>Welcome to a collection of FAQ provided by One Future Unified Team. A collection of frequently asked question with answers provided by the team. </p>
+   <br>
+   <button type="button" class="collapsible">What are InfoHQ? <i class='bx bxs-caret-down-circle'></i></button>
+<div class="content1">
+  <p>InfoHQ is an open source software, based on HTML, CSS and JavaScript. Users could edit InfoHQ pages and view InfoHQ pages history and source codes.<br><br>InfoHQ got some inspiration from "wiki" by MediaWiki. InfoHQ is currently available to be hosted in most (if not all) free and paid web hosting companies. </p>
+</div>
+	   <button type="button" class="collapsible">Who are One Future Unified Team? <i class='bx bxs-caret-down-circle'></i></button>
+<div class="content1">
+  <p>One Future Unified Team is a small team based in Malaysia. One Future Unified Team is focused in many things, from web development to story writing. One Future Unified Team is founded from a group of young friends with an interest in technology.</p>
+</div>
+   <button type="button" class="collapsible">Is InfoHQ open source? <i class='bx bxs-caret-down-circle'></i></button>
+<div class="content1">
+  <p>InfoHQ is an open source software. All users could view and edit all of our source code. InfoHQ is licensed under MIT open source licenses. </p>
+</div>
+   <button type="button" class="collapsible">Is InfoHQ free? <i class='bx bxs-caret-down-circle'></i></button>
+<div class="content1">
+  <p>InfoHQ is a free open source software for everyone! Everyone could use and edit InfoHQ for free. All features provided in InfoHQ is totally free for everyone to use and enjoy.</p>
+</div>
+   <button type="button" class="collapsible">How to Create A InfoHQ? <i class='bx bxs-caret-down-circle'></i></button>
+<div class="content1">
+  <p>Everyone could create and request a InfoHQ in One Future Unified Team. Creating a InfoHQ is totally free in One Future Unified Team. Please fill up the Google Form linked and provided <a href="https://forms.gle/jA19y1JtQhAZdTWG9">here</a> to request an InfoHQ. </p>
+</div>
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
 
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content1 = this.nextElementSibling;
+    if (content1.style.display === "block") {
+      content1.style.display = "none";
+    } else {
+      content1.style.display = "block";
+    }
+  });
+}
+</script>
   </div>
 </div>
 
-<div id="myNav4" class="overlay">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav4()">&times;</a>
+<div id="myNav3" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav3()">&times;</a>
   <div class="overlay-content">
 
     </div>
   </div>
-</div>
 
-<div id="myNav5" class="overlay">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav5()">&times;</a>
+<div id="myNav4" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav4()">&times;</a>
   <div class="overlay-content">
-
+<h1>InfoHQ Directories</h1>
+<p></p>
+<br><br>
+<a href="/infohq/pj-masks-info.html"><div class="link">PJ Masks Save The Day Information</div></a>
   </div>
 </div>
 
@@ -584,32 +694,25 @@ padding-right: 20px;
 <br>
 <hr>
 <br>
-<h2>Open For Everyone</h2>
-<p>InfoHQ is open for everyone to become a contributors, maintainer and etc inside InfoHQ. You could become a contributors by editing in InfoHQ or become a maintainer by creating an InfoHQ here by using our official Google Form <a href="https://forms.gle/jA19y1JtQhAZdTWG9">here</a>.</p>
-<br>
-<hr>
-<br>
 <h2>Information</h2>
 <br>
-<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav9()" id="terms">Terms</div>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav()" id="requests">Requests</div>
 <br>
-<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;"><a href="https://ofut.substack.com">Blog</a></div>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav1()" id="discussion">Discussion</div>
 <br>
-<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav3()" id="services">Services</div>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav2()" id="faq">FAQ</div>
 <br>
-<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav2()" id="news">News</div>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav3()" id="teams">Teams</div>
 <br>
-<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav4()" id="teams">Teams</div>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav4()" id="directory">Directory</div>
 <br>
-<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav5()" id="staff">Staff</div>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav5()" id="status">Status</div>
 <br>
-<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav7()" id="status">Status</div>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav6()" id="community">Community</div>
 <br>
-<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav()" id="community">Community</div>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav7()" id="donation">Donation</div>
 <br>
-<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav1()" id="donation">Donation</div>
-<br>
-<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav6()" id="partner">Partner</div>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav8()" id="partner">Partner</div>
 <br>
 <script>
 function openNav() {
@@ -676,12 +779,12 @@ function closeNav7() {
   document.getElementById("myNav7").style.width = "0%";
 }
 
-function openNav9() {
-  document.getElementById("myNav9").style.width = "100%";
+function openNav8() {
+  document.getElementById("myNav8").style.width = "100%";
 }
 
-function closeNav9() {
-  document.getElementById("myNav9").style.width = "0%";
+function closeNav8() {
+  document.getElementById("myNav8").style.width = "0%";
 }
 </script>
 <br><br>
