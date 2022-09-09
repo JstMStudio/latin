@@ -371,7 +371,7 @@ padding-right: 20px;
   }
 }
 
-.collapsible2 {
+.collapsible1 {
   cursor: pointer;
   outline: none; 
   font-size:30px;
@@ -487,6 +487,17 @@ ul.breadcrumb li a:hover {
   display: block
 }
 
+#myUL1 li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: cyan;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
 #myUL li a:hover:not(.header) {
   background-color: #eee;
 }
@@ -570,11 +581,11 @@ ul.breadcrumb li a:hover {
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <div class="overlay-content">
 <h1>Repositories</h1>
-<p>Welcome to repository directory of Software and Website Developer Team! A directory listing of all repositories in Software and Website Developer Team Repository. A place to discover for amazing repository in Software and Website Developer Team Repository by awesome developers communities.</p><br>
+<p>Welcome to repository directory of One Future Unified Team! A directory listing of all repositories in One Future Unified Team Repository. A place to discover for amazing repository in One Future Unified Team Repository by awesome developers communities.</p><br>
 
 <input type="text" id="myInput10" onkeyup="myFunction10()" placeholder="Search for repository names.." title="Type in a name">
 
-<ul id="myUL">
+<ul id="myUL1">
   <li><a href="#">NoneA</a></li>
   <li><a href="#">NoneB</a></li>
 </ul>
@@ -603,56 +614,42 @@ function myFunction10() {
 <div id="myNav1" class="overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav1()">&times;</a>
   <div class="overlay-content">
-
-  </div>
+<h1>Create Repository</h1>
+<p><strong>We provide multiple methods for everyone to start and create their repository on One Future Unified Team. Users could choose one methods for all methods provided here to start and create a repository.</strong></p>
+<br>
+<hr>
+<br>
+<h2>Methods</h2>
+<br>
+<button type="button" class="collapsible1">Create Github Issues</button>
+<div class="content2">
+  <p>You could create a issue in our <a href="https://github.com/One-Future-Unified-Team/Documentation/issues">Documentation repository</a> on One Future Unified Team Github organization. You could create an issue stating all information about your repository and etc so a volunteer could stand in and create the repository for you. </p>
+</div>
+<button type="button" class="collapsible1">Create Ticket</button>
+<div class="content2">
+    <p>You could create a repository by creating a ticket to contact us. You could contact us and tell us information that you want in your repository so One Future Unified Team staff could create a repository for you. This will only work during One Future Unified Team staff business hours. You could create a ticket on our Discord/Support Desk. </p>
+</div>
+<button type="button" class="collapsible1">Google Form</button>
+<div class="content2">
+  <p>That not all, you could also fill up One Future Unified Team repository Google Form. You could fill up the Google Form with all information in the fields needed. Once you finish filling up, submit the form to One Future Unified Team and wait for a repository creator or OFUT staff to create a repository for you, which usually took a few hours to days.</p>
 </div>
 
-<div id="myNav2" class="overlay">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
-  <div class="overlay-content">
+<script>
+var coll = document.getElementsByClassName("collapsible1");
+var i;
 
-  </div>
-</div>
-
-<div id="myNav3" class="overlay">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav3()">&times;</a>
-  <div class="overlay-content">
-
-  </div>
-</div>
-
-<div id="myNav4" class="overlay">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav4()">&times;</a>
-  <div class="overlay-content">
-
-    </div>
-  </div>
-
-<div id="myNav5" class="overlay">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav5()">&times;</a>
-  <div class="overlay-content">
-
-  </div>
-</div>
-
-<div id="myNav6" class="overlay">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav6()">&times;</a>
-  <div class="overlay-content">
-
-  </div>
-</div>
-
-<div id="myNav7" class="overlay">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav7()">&times;</a>
-  <div class="overlay-content">
-
-  </div>
-</div>
-
-<div id="myNav8" class="overlay">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav8()">&times;</a>
-  <div class="overlay-content">
-
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content2 = this.nextElementSibling;
+    if (content2.style.display === "block") {
+      content2.style.display = "none";
+    } else {
+      content2.style.display = "block";
+    }
+  });
+}
+</script>
   </div>
 </div>
 <ul class="breadcrumb">
@@ -663,29 +660,15 @@ function myFunction10() {
 </ul>
 <br>
       <h1>Repository</h1>
-      <p>Welcome to Software and Website Developer Team repository! A place to find, read, view and study source codes from open source websites uploaded by their respective developer.</p>
+      <p>Welcome to One Future Unified Team repository! A place to find, read, view and study source codes from open source websites uploaded by their respective developer.</p>
       <br>
-      <p>Software and Website Developer Team repository is totally free for everyone! Users could view and upload source codes of open source software in Software and Website Developer Team repository for totally free with no hidden fees or ads.</p>
+      <p>One Future Unified Team repository is totally free for everyone! Users could view and upload source codes of open source software in One Future Unified Team repository for totally free with no hidden fees or ads.</p>
       <br>
-      <p>Software and Website Developer Team repository itself is totally open source. Everyone could view, study and read Software and Website Developer Team repository source codes.</p>
+      <p>One Future Unified Team repository itself is totally open source. Everyone could view, study and read One Future Unified Team repository source codes.</p>
 <br>
-<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav()" id=""></div>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav()" id="repositories">Repositories</div>
 <br>
-<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav1()" id=""></div>
-<br>
-<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav2()" id=""></div>
-<br>
-<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav3()" id=""></div>
-<br>
-<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav4()" id=""></div>
-<br>
-<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav5()" id=""></div>
-<br>
-<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav6()" id=""></div>
-<br>
-<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav7()" id=""></div>
-<br>
-<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav8()" id=""></div>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav1()" id="createrepository">Create Repository</div>
 <br>
 <script>
 function openNav() {
@@ -702,62 +685,6 @@ function openNav1() {
 
 function closeNav1() {
   document.getElementById("myNav1").style.width = "0%";
-}
-
-function openNav2() {
-  document.getElementById("myNav2").style.width = "100%";
-}
-
-function closeNav2() {
-  document.getElementById("myNav2").style.width = "0%";
-}
-
-function openNav3() {
-  document.getElementById("myNav3").style.width = "100%";
-}
-
-function closeNav3() {
-  document.getElementById("myNav3").style.width = "0%";
-}
-
-function openNav4() {
-  document.getElementById("myNav4").style.width = "100%";
-}
-
-function closeNav4() {
-  document.getElementById("myNav4").style.width = "0%";
-}
-
-function openNav5() {
-  document.getElementById("myNav5").style.width = "100%";
-}
-
-function closeNav5() {
-  document.getElementById("myNav5").style.width = "0%";
-}
-
-function openNav6() {
-  document.getElementById("myNav6").style.width = "100%";
-}
-
-function closeNav6() {
-  document.getElementById("myNav6").style.width = "0%";
-}
-
-function openNav7() {
-  document.getElementById("myNav7").style.width = "100%";
-}
-
-function closeNav7() {
-  document.getElementById("myNav7").style.width = "0%";
-}
-
-function openNav8() {
-  document.getElementById("myNav8").style.width = "100%";
-}
-
-function closeNav8() {
-  document.getElementById("myNav8").style.width = "0%";
 }
 </script>
 <br><br>
