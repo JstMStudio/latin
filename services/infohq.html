@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -463,6 +463,13 @@ padding-right: 20px;
   font-size: 15px;
   font-weight: bold;
 }
+
+pre code {
+  background-color: #eee;
+  border: 1px solid #999;
+  display: block;
+  padding: 10px;
+}
     </style>
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -709,9 +716,137 @@ for (i = 0; i < coll.length; i++) {
    <br>
    <h2>Document</h2>
    <br>
-   <button type="button" class="collapsible"><i class='bx bxs-down-arrow'></i></button>
+   <button type="button" class="collapsible">Colour <i class='bx bxs-down-arrow'></i></button>
 <div class="content1" style="color:green;">
-
+<h1>Colour</h1>
+   <p>Users could also edit text colour in all InfoHQ. You could edit all text colour in InfoHQ pages and websites. By default, InfoHQ text colour is green with footer is blue. You could change it to any colour you likes if you want.</p>
+   <p>In order to change InfoHQ text colour, please insert this line to the tags you preferred which is provided below by us to change to any color you preferred. 
+<pre>
+  <code>
+    style="color: red;"
+  </code>
+</pre>
+</div>
+   <button type="button" class="collapsible">Edit <i class='bx bxs-down-arrow'></i></button>
+<div class="content1" style="color:green;">
+<h1>Edit</h1>
+   <p>All pages in InfoHQ is editable by everyone from admin to normal users and members. Users could edit all InfoHQ pages and websites like helping to add more information and etc. You could edit all pages of your InfoHQ by visiting the path: infohq /(InfoHQ database name)/ in the main directory of our website. Once you done, you could submit a pull request to wait for a pull request reviewer to approve it so it could go live on the InfoHQ websites.</p>
+</div>
+   <button type="button" class="collapsible">Markdown <i class='bx bxs-down-arrow'></i></button>
+<div class="content1" style="color:green;">
+<h1>Markdown</h1>
+   <p>InfoHQ currently also support markdown on all InfoHQ websites. InfoHQ users and admin could use markdown on every InfoHQ websites and pages. You could use any types of markdown available too.</p>
+   <hr>
+   <h2>Basic Style</h2>
+   <p>InfoHQ offered many basic styles in markdown. You could use most if not all basic style markdown in InfoHQ.</p>
+<li><strong>Strong</strong> : 
+<pre>
+  <code>
+    strong Hi /strong
+  </code>
+</pre>
+   <li><em>Italic</em> : 
+<pre>
+  <code>
+       em Italic  /em
+  </code>
+</pre>
+    <br>
+   <hr>
+   <br>
+   <h2>Headings</h2>
+   <p>InfoHQ also support heading markdown too. We support all 6 types of headings markdown in InfoHQ without any issues.</p>
+   <h3>Results</h3>
+   <ul style="text-align:left;">
+   <li><h1>H1</h1></li>
+   <li><h2>H2</h2></li>
+   <li><h3>H3</h3></li>
+   <li><h4>H4</h4></li>
+   <li><h5>H5</h5></li>
+   <li><h6>H6</h6></li>
+   </ul>
+   <h3>Codes</h3>
+   <ul style="text-align:left;">
+   <li>< h1 >H1< / h1 ></li>
+   <li>< h2 >H2< / h2 ></li>
+   <li>< h3 >H3< / h3 ></li>
+   <li>< h4 >H4< / h4 ></li>
+   <li>< h5 >H5< / h5 ></li>
+   <li>< h6 >H6< / h6 ></li>
+   </ul>
+    <br>
+   <hr>
+   <br>
+   <h2>Line Break</h2>
+   <p>In order to use line break, you could use <code>br</code> when you wanted to make the linebreak. We currently support <code>br</code> markdown in InfoHQ. You could use <code>br</code> in any place that you wish to use line break.</p>
+    <br>
+   <hr>
+   <br>
+   <h2>Codes Block</h2>
+   <p>InfoHQ also support code block markdown too! You could denote a word or phrase as code using code block by putting <code>code</code> in front and behind the codes</p>
+    <br>
+   <hr>
+   <br>
+   <h2>List</h2>
+   <p></p>
+   <h3>Results</h3>
+   <ul>
+   <li>LI</li>
+   <li>LI</li>
+   </ul>
+   <h3>Codes</h3>
+   <code>ul</code><br><code>li</code><br><code>li</code><br><code>ul</code>
+   <br>
+   <hr>
+   <br>
+   <h2>Links</h2>
+   <p>InfoHQ also support links markdown in all InfoHQ websites and pages. All InfoHQ users and admin could use links in all InfoHQ pages and websites.</p>
+   <ul style="text-align:left;">
+   <li><a href="#">A Href</a> : <code>< a href=" # " >A Href < / a ></code>
+   <li><a href="mailto:example@gmail.com">Email Me</a> : <code>< a  href=" mailto:example@gmail.com ">Email Me < / a ></code>
+   </ul>
+</div>
+<button type="button" class="collapsible">Installing <i class='bx bxs-down-arrow'></i></button>
+<div class="content1" style="color:green;">
+<h1>Installing</h1>
+   <p>InfoHQ is a free open source software. All users could view, study and read all of InfoHQ source codes. All users could download and install InfoHQ on their websites for free per our licenses terms (MIT open source licenses).</p> 
+   <p>Users could install InfoHQ software on their sites too. Installing InfoHQ is totally free for everyone in our sides. You still needed web hosting to install InfoHQ in through and if you want, a domain would be needed. We provide and linked some free hosting example here:
+   <ul style="text-align:left;">
+   <li><a href="https://pages.github.com/">Github Pages</a> (Recommended)</li>
+   <li><a href="https://vercel.com">Vercel</a></li>
+   <li><a href="https://netlify.com">Netlify</a></li>
+   <li><a href="https://cloudflare.com">Cloudflare</a></li>
+   </ul>
+   <br>
+   <hr>
+   <br>
+   <h2>Installing</h2>
+   <p>In order to install InfoHQ, you firstly needed a web hosting that support hosting for static sites. Mostly free and paid web hosting provide support for static sites too. You could download InfoHQ in Github repository release tab. You could download any version you likes too <a href="https://github.com/One-Future-Unified-Team/InfoHQ/releases">here</a>. After downloading, please upload to your hosting file section. Once you uploaded and created the file, edit the "Edit", "View Source" and "History" links and push it again. After the push succeed, your InfoHQ is now up and running for you to create and edit articles.</p>
+</div>
+<button type="button" class="collapsible">Plugins <i class='bx bxs-down-arrow'></i></button>
+<div class="content1" style="color:green;">
+<p>InfoHQ also supports a vary of awesome extensions too, developed, powered and released by One Future Unified Team and the community. All extensions of InfoHQ had been tested and compatible across all releases of InfoHQ.</p>
+<button type="button" class="collapsible">Comments <i class='bx bxs-down-arrow'></i></button>
+<div class="content1" style="color:green;">
+   <p>InfoHQ also have a comments plugins for everyone to use too. Comments plugins is a free plugins made and powered by One Future Unified Team for everyone. InfoHQ users and admin could add a comment section on a InfoHQ pages for everyone to comment on an InfoHQ pages. A plugins useful for everyone that would like to discuss about a stuff/topic.</p> 
+   <p>In order to install countdown plugins, please put the code provided below by One Future Unified Team in <code>body</code> tag.</p>
+<div style="text-align:left;"><script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FMain-Website%2Fblob%2Fmain%2Fservices%2Finfohq-plugins-codes%2Fcomments.html&style=default&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script></div>
+</div>
+<button type="button" class="collapsible">Countdown <i class='bx bxs-down-arrow'></i></button>
+<div class="content1" style="color:green;">
+   <p>InfoHQ also have a countdown plugins for everyone to use too. Countdown plugins is a free plugins made by One Future Unified Team for everyone. InfoHQ users and admin could add a countdown on a InfoHQ pages to countdown to a specific date.</p> 
+   <p>In order to install countdown plugins, please put the code provided below by One Future Unified Teamin <code>body</code> tag.</p>
+   <div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FMain-Website%2Fblob%2Fmain%2Fservices%2Finfohq-plugins-codes%2Fcountdown.html&style=default&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script>
+   </div>
+</div>
+<button type="button" class="collapsible">Translate <i class='bx bxs-down-arrow'></i></button>
+<div class="content1" style="color:green;">
+<p>InfoHQ also have a translation plugins. Users could add the translation plugins of InfoHQ into their InfoHQ pages so all visitors could translate the pages into any languages of their preferences. Translation Plugins is currently powered using Google Translate API. You could install it from the code below.</p>
+<div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Unified-Team%2FMain-Website%2Fblob%2Fmain%2Fservices%2Finfohq-plugins-codes%2Ftranslate.html&style=default&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script>
+	</div>
+</div>
 </div>
 
 <script>
@@ -732,6 +867,7 @@ for (i = 0; i < coll.length; i++) {
 </script>
   </div>
 </div>
+
 
 <h1>InfoHQ</h1>
 <h3>Welcome to InfoHQ! An open source free-content encyclopedia software.</h3>
