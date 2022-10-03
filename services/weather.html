@@ -11,7 +11,7 @@
   gtag('config', 'G-ZM4LK5K0LJ');
 </script>
     <link rel="stylesheet" href="style.css">
-    <title>Weather</title>
+    <title>Tempestas</title>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 *{
@@ -662,7 +662,7 @@ background-color: black;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
 <body>
-<div class="sidebar">
+  <div class="sidebar">
     <div class="logo-details">
         <div class="logo_name">JstMStudio</div>
         <i class='bx bx-menu' id="btn" ></i>
@@ -678,9 +678,9 @@ background-color: black;
       <li>
        <a href="about.html">
          <i class='bx bx-info-circle'></i>
-         <span class="links_name">About</span>
+         <span class="links_name">De nobis</span>
        </a>
-       <span class="tooltip">About</span>
+       <span class="tooltip">De nobis</span>
      </li>
      <li>
      <li>
@@ -732,18 +732,18 @@ background-color: black;
   <section class="home-section">
 <ul class="breadcrumb">
   <li><a href="/home.html">Website</a></li>
-  <li><a href="/web-app.html">Web App</a></li>
-  <li><a href="">Services</a></li>
-  <li>Weather</li>
+   <li><a href="/web-app.html">Web App</a></li>
+   <li><a href="">Services</a></li>
+   <li>Tempestas</li>
 </ul>
 <br>
 <section class="top-banner">
-  <div class="container">
-    <h1 class="heading">Weather</h1>
-    <form>
-      <input type="text" placeholder="Search for a city" autofocus style="height:100%;">
-      <button type="submit">SUBMIT</button>
-      <span class="msg"></span>
+   <div class="container">
+     <h1 class="heading">Tempestas</h1>
+     <form>
+       <input type="text" placeholder="Search urbis" autofocus style="height:100%;">
+       <button type="submit">SUBMIT</button>
+       <span class="msg"></span>
     </form>
   </div>
 </section>
@@ -788,9 +788,9 @@ form.addEventListener("submit", e => {
     });
 
     if (filteredArray.length > 0) {
-      msg.textContent = `You already know the weather for ${
-        filteredArray[0].querySelector(".city-name span").textContent
-      } ...otherwise be more specific by providing the country code as well 😉`;
+      msg.textContent = `Iam nostis tempestas for ${
+         filteredArray[0].querySelector(".city-name span").textContent
+       } ... aliter esse subtilius providendo quam bene`;
       form.reset();
       input.focus();
       return;
@@ -827,7 +827,7 @@ form.addEventListener("submit", e => {
       list.appendChild(li);
     })
     .catch(() => {
-      msg.textContent = "Please search for a valid city 😩";
+      msg.textContent = "Quaeso quaerere urbem validam 😩";
     });
 
   msg.textContent = "";
@@ -838,8 +838,8 @@ form.addEventListener("submit", e => {
 <br><br>
   <hr>
   <br>
-  <h1>Themes</h1>
-<p>You could customise the themes of JstMStudio into a colour that you prefer. Select and choose from the color set below to make JstMStudio UI into your color preference.</p>
+<h1>Themes</h1>
+<p>Mos themata JstMStudio in colore quem mavis. Elige et eligere e colore infra statuto ut JstMStudio UI in praeponendo colorem facias.</p>
 <br>
 <div style="float:left;text-align:center;padding:10px;">
 <button onclick="myFunction()" style="background-color: black;" class="button2"></button>
