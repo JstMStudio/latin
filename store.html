@@ -491,6 +491,34 @@ padding-right: 20px;
 #myUL li a:hover:not(.header) {
   background-color: #eee;
 }
+
+.collapsible {
+  background-color: yellow;
+  color: blue;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 17px;
+  font-weight: bold;
+  border-style: solid;
+  border-color: green;
+  border-width: 5px;
+}
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: yellow;
+  color: blue;
+  text-align: center;
+  border-style: solid;
+  border-color: green;
+  border-width: 5px;
+  font-weight: bold;
+}
     </style>
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -879,6 +907,63 @@ for (i = 0; i < coll.length; i++) {
           </div>
         </div>
   </div>
+  
+<div id="myNav4" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav4()">&times;</a>
+  <div class="overlay-content">
+<h1>Materia Store</h1>
+<p>JstMStudio quoque materiae copia quoque est. JstMStudio multarum materiarum a studio de JstMStudio Material Store evolutas. JstMStudio Material Store producere materias altas pro clientibus et clientibus nostris uti in loco eorum pro margine pecuniae. JstMStudio hie materias vendunt ad institutum nonnullas etiam operationes Studio. </p>
+<br>
+<hr>
+<br>
+<h2>Materia</h2>
+<p>JstMStudio currently multa genera materiae website ad marginem pretii a competitoribus nostris vendit. Omnia materias ab JstMStudio venditas quae infra enumerantur tu potuisti reprehendo.</p>
+<br>
+<button type="button" class="collapsible">Themes</button>
+<div class="content">
+<p>JstMStudio thema configurare vendit pro clientibus et usoribus nostris. JstMStudio Themes configurant clientes utentes mutare paginas themata colori mallent. Nunc nobis 9 figurationes in hac materia praebent.</p>
+<li style="text-align:left;">Price: $30</li>
+<li style="text-align:left;">Delivery Time: 48 horas</li>
+<li style="text-align:left;"><a href="materials/themes.html">Demo</a></li>
+<br>
+</div>
+<br><br>
+<button type="button" class="collapsible">Animated Color Hyperlink Button</button>
+<div class="content">
+  <p>JstMStudio etiam tesseram hyperlink venditionis continet colori mutationem ac singularem animationem in globulo volitans. Clientes hoc cinematographicis suis hyperlinks addere potuerunt ab vjust $20. </p>
+  <li style="text-align:left;">Price: $20</li>
+<li style="text-align:left;">Delivery Time: 48 horas</li>
+<li style="text-align:left;"><a href="materials/animated-color-hyperlink-button.html">Demo</a></li>
+<br>
+</div>
+<br><br>
+<button type="button" class="collapsible">Quaerere Filter Cum Descriptione</button>
+<div class="content">
+  <p>JstMStudio investigationis colum vende ex indice rerum quae descriptionem continet pro omnibus et singulis elementis in universo indice. JstMStudio colum quaerere solum nomen vel titulum quaerere de omissa accuratiore faciendo. Potuisti eam habere in pagina tua pro sicut $20.</p>
+    <li style="text-align:left;">Price: $20</li>
+<li style="text-align:left;">Delivery Time: 48 horas</li>
+<li style="text-align:left;"><a href="materials/search-filter-with-description.html">Demo</a></li>
+<br>
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+  </div>
+</div>
 
 <h1>Store</h1>
 <p>JstMStudio parva manipulus fundatur in Malaysia. JstMStudio in multis rebus e evolutione paginae scribendae historia tenditur. JstMStudio fundatur e coetu iuvenum amicorum cum cura technicae artis.</p>
@@ -908,6 +993,8 @@ for (i = 0; i < coll.length; i++) {
 <div style="font-size:30px;background-color:cyan; width:90%;text-align:center;color:purpura;padding:10px;font-weight:bold; border-style: solid;" onclick="openNav2()" id="store">Store</div>
 <br>
 <div style="font-size:30px;background-color:cyan; width:90%;text-align:center;color:purpura;padding:10px;font-weight:bold; border-style: solid;" onclick="openNav3()" id="website">Website</div>
+<br>
+<div style="font-size:30px;background-color:cyan;width:90%;text-align:center;color:purple;padding:10px;font-weight: bold;border-style: solid;" onclick="openNav4()" id="materialstore">Materia Store</div>
 <br>
 <script>
 function openNav() {
@@ -940,6 +1027,14 @@ function openNav3() {
 
 function closeNav3() {
   document.getElementById("myNav3").style.width = "0%";
+}
+
+function openNav4() {
+  document.getElementById("myNav4").style.width = "100%";
+}
+
+function closeNav4() {
+  document.getElementById("myNav4").style.width = "0%";
 }
 </script>
 <br><br>
