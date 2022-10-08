@@ -597,6 +597,20 @@ text-align: center;
   font-size: 15px;
   font-weight: bold;
 }
+
+.collapsible1 {
+  background-color: yellow;
+  color: red;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+  font-weight: bold;
+}
+
 .content1 {
   padding: 0 18px;
   display: none;
@@ -940,7 +954,7 @@ function myFunction12() {
 <h1>Guilded</h1>
   <p>Welcome to Guilded section of Discoverer! Locum explorare et invenire tons de Guilded automata et servo communitatis. Pluribus communitatibus locum explorare numquam audisti. </p>
   <br>
-  <button type="button" class="collapsible">Servers</button>
+  <button type="button" class="collapsible1">Servers</button>
 <div class="content1">
 <p>Usores et servitores simul coniungimus ut servo communitatis activae formetur. Locus in quo usores conveniri cum servo cum iussisti velunt vel volunt.</p><br>
 <input type="text" id="myInput3" onkeyup="myFunction13()" placeholder="Search for server name.." title="Type in a name" style="background-color:blue;color:orange;">
@@ -962,7 +976,7 @@ function myFunction12() {
   <li><div><a href="#">Nonec</a>a</div></li>
 </ul>
 <script>
-var coll = document.getElementsByClassName("collapsible");
+var coll = document.getElementsByClassName("collapsible1");
 var i;
 
 for (i = 0; i < coll.length; i++) {
