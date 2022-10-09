@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZM4LK5K0LJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZM4LK5K0LJ');
+</script>
+  <title>Project Library</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+}
+.sidebar{
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 78px;
+  background: #11101D;
+  padding: 6px 14px;
+  z-index: 99;
+  transition: all 0.5s ease;
+}
+.sidebar.open{
+  width: 250px;
+}
+.sidebar .logo-details{
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.sidebar .logo-details .icon{
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.sidebar .logo-details .logo_name{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.sidebar.open .logo-details .icon,
+.sidebar.open .logo-details .logo_name{
+  opacity: 1;
+}
+.sidebar .logo-details #btn{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 22px;
+  transition: all 0.4s ease;
+  font-size: 23px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.sidebar.open .logo-details #btn{
+  text-align: right;
+}
+.sidebar i{
+  color: #fff;
+  height: 60px;
+  min-width: 50px;
+  font-size: 28px;
+  text-align: center;
+  line-height: 60px;
+}
+.sidebar .nav-list{
+  margin-top: 20px;
+  height: 100%;
+}
+.sidebar li{
+  position: relative;
+  margin: 8px 0;
+  list-style: none;
+}
+.sidebar li .tooltip{
+  position: absolute;
+  top: -20px;
+  left: calc(100% + 15px);
+  z-index: 3;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: 0s;
+}
+.sidebar li:hover .tooltip{
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.sidebar.open li .tooltip{
+  display: none;
+}
+.sidebar input{
+  font-size: 15px;
+  color: #FFF;
+  font-weight: 400;
+  outline: none;
+  height: 50px;
+  width: 100%;
+  width: 50px;
+  border: none;
+  border-radius: 12px;
+  transition: all 0.5s ease;
+  background: #1d1b31;
+}
+.sidebar.open input{
+  padding: 0 20px 0 50px;
+  width: 100%;
+}
+.sidebar .bx-search{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 22px;
+  background: #1d1b31;
+  color: #FFF;
+}
+.sidebar.open .bx-search:hover{
+  background: #1d1b31;
+  color: #FFF;
+}
+.sidebar .bx-search:hover{
+  background: #FFF;
+  color: #11101d;
+}
+.sidebar li a{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  background: #11101D;
+}
+.sidebar li a:hover{
+  background: #FFF;
+}
+.sidebar li a .links_name{
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s;
+}
+.sidebar.open li a .links_name{
+  opacity: 1;
+  pointer-events: auto;
+}
+.sidebar li a:hover .links_name,
+.sidebar li a:hover i{
+  transition: all 0.5s ease;
+  color: #11101D;
+}
+.sidebar li i{
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  border-radius: 12px;
+}
+.sidebar li.profile{
+  position: fixed;
+  height: 60px;
+  width: 78px;
+  left: 0;
+  bottom: -8px;
+  padding: 10px 14px;
+  background: #1d1b31;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+.sidebar.open li.profile{
+  width: 250px;
+}
+.sidebar li .profile-details{
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.sidebar li img{
+  height: 45px;
+  width: 45px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+.sidebar li.profile .name,
+.sidebar li.profile .job{
+  font-size: 15px;
+  font-weight: 400;
+  color: #fff;
+  white-space: nowrap;
+}
+.sidebar li.profile .job{
+  font-size: 12px;
+}
+.sidebar .profile #log_out{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background: #1d1b31;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 0px;
+  transition: all 0.5s ease;
+}
+.sidebar.open .profile #log_out{
+  width: 50px;
+  background: none;
+}
+.home-section{
+  position: relative;
+  background: #E4E9F7;
+  min-height: 100vh;
+  top: 0;
+  left: 78px;
+  width: calc(100% - 78px);
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+.sidebar.open ~ .home-section{
+  left: 250px;
+  width: calc(100% - 250px);
+}
+.home-section .text{
+  display: inline-block;
+  color: #11101d;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 18px
+}
+@media (max-width: 420px) {
+  .sidebar li .tooltip{
+    display: none;
+  }
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #11101D;
+  text-align: center;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+.button {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 24px;
+  padding: 20px;
+  width: 150px;
+  text-align: center;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: transparent;
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+      
+body.dark-mode {
+  background-color: black;
+  color: cyan;
+}
+
+body.red-mode {
+  background-color: red;
+  color: white;
+}
+
+body.blue-mode {
+  background-color: blue;
+  color: cyan;
+}
+
+body.green-mode {
+  background-color: green;
+  color: yellow;
+}
+
+body.yellow-mode {
+  background-color: yellow;
+  color: green;
+}
+
+body.orange-mode {
+  background-color: orange;
+  color: blue;
+}
+
+body.purple-mode {
+  background-color: purple;
+  color: cyan;
+}
+
+body.magenta-mode {
+  background-color: magenta;
+  color: #1a2b22;
+}
+
+.dark-mode .home-section {
+  background-color: black;
+  color: cyan;
+}
+
+.red-mode .home-section {
+  background-color: red;
+  color: white;
+}
+
+.blue-mode .home-section {
+  background-color: blue;
+  color: cyan;
+}
+
+.green-mode .home-section {
+  background-color: green;
+  color: yellow;
+}
+
+.yellow-mode .home-section {
+  background-color: yellow;
+  color: green;
+}
+
+.orange-mode .home-section {
+  background-color: orange;
+  color: blue;
+}
+
+.purple-mode .home-section {
+  background-color: purple;
+  color: cyan;
+}
+
+.magenta-mode .home-section {
+  background-color: magenta;
+  color: #1a2b22;
+}
+      
+body {
+  background: #E4E9F7;
+  text-align: center;
+  color: blue;
+  }
+  
+.button2 {
+float:left;
+background-color: black;
+  color: red;
+  padding: 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  color: yellow;
+}
+
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: blue;
+  width: 30%;
+  height: 1200px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: yellow;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: green;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: 1200px;
+  background: yellow;
+  text-align: center;
+  color: blue;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a{
+  margin-top: -1px; /* Prevent double borders */
+  padding: 12px;
+  text-decoration: none;
+  font-size: 20px;
+  color: red;
+  display: block;
+  border-bottom: 1px solid #ddd;
+}
+
+#myUL li {
+background-color: cyan;
+color: red;
+border: 1px solid #ddd;
+font-size:15px;
+text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#myInput2 {
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+}
+
+#myUL2 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL2 li a{
+  margin-top: -1px; /* Prevent double borders */
+  padding: 12px;
+  text-decoration: none;
+  font-size: 20px;
+  color: red;
+  display: block;
+  border-bottom: 1px solid #ddd;
+}
+
+#myUL2 li {
+background-color: cyan;
+color: red;
+border: 1px solid #ddd;
+font-size:15px;
+text-align: center;
+}
+
+.collapsible {
+  background-color: yellow;
+  color: red;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+  font-weight: bold;
+}
+      
+.collapsible1 {
+  background-color: yellow;
+  color: red;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+  font-weight: bold;
+}
+      
+.content1 {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: yellow;
+  color: blue;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#myInput3 {
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+}
+
+#myUL3 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL3 li a{
+  margin-top: -1px; /* Prevent double borders */
+  padding: 12px;
+  text-decoration: none;
+  font-size: 20px;
+  color: red;
+  display: block;
+  border-bottom: 1px solid #ddd;
+}
+
+#myUL3 li {
+background-color: cyan;
+color: red;
+border: 1px solid #ddd;
+font-size:15px;
+text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#myInput4 {
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+}
+
+#myUL4 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL4 li a{
+  margin-top: -1px; /* Prevent double borders */
+  padding: 12px;
+  text-decoration: none;
+  font-size: 20px;
+  color: red;
+  display: block;
+  border-bottom: 1px solid #ddd;
+}
+
+#myUL4 li {
+background-color: cyan;
+color: red;
+border: 1px solid #ddd;
+font-size:15px;
+text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#myInput5 {
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+}
+
+#myUL5 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL5 li a{
+  margin-top: -1px; /* Prevent double borders */
+  padding: 12px;
+  text-decoration: none;
+  font-size: 20px;
+  color: red;
+  display: block;
+  border-bottom: 1px solid #ddd;
+}
+
+#myUL5 li {
+background-color: cyan;
+color: red;
+border: 1px solid #ddd;
+font-size:15px;
+text-align: center;
+}
+
+#myInput6 {
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+}
+
+#myUL6 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL6 li a{
+  margin-top: -1px; /* Prevent double borders */
+  padding: 12px;
+  text-decoration: none;
+  font-size: 20px;
+  color: red;
+  display: block;
+  border-bottom: 1px solid #ddd;
+}
+
+#myUL6 li {
+background-color: cyan;
+color: red;
+border: 1px solid #ddd;
+font-size:15px;
+text-align: center;
+}
+
+#myInput7 {
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+}
+
+#myUL7 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL7 li a{
+  margin-top: -1px; /* Prevent double borders */
+  padding: 12px;
+  text-decoration: none;
+  font-size: 20px;
+  color: red;
+  display: block;
+  border-bottom: 1px solid #ddd;
+}
+
+#myUL7 li {
+background-color: cyan;
+color: red;
+border: 1px solid #ddd;
+font-size:15px;
+text-align: center;
+}
+
+#myInput8 {
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+}
+
+#myUL8 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL8 li a{
+  margin-top: -1px; /* Prevent double borders */
+  padding: 12px;
+  text-decoration: none;
+  font-size: 20px;
+  color: red;
+  display: block;
+  border-bottom: 1px solid #ddd;
+}
+
+#myUL8 li {
+background-color: cyan;
+color: red;
+border: 1px solid #ddd;
+font-size:15px;
+text-align: center;
+}
+
+#myInput9 {
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+}
+
+#myUL9 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL9 li a{
+  margin-top: -1px; /* Prevent double borders */
+  padding: 12px;
+  text-decoration: none;
+  font-size: 20px;
+  color: red;
+  display: block;
+  border-bottom: 1px solid #ddd;
+}
+
+#myUL9 li {
+background-color: cyan;
+color: red;
+border: 1px solid #ddd;
+font-size:15px;
+text-align: center;
+}
+
+#myInput10 {
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+}
+
+#myUL10 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL10 li a{
+  margin-top: -1px; /* Prevent double borders */
+  padding: 12px;
+  text-decoration: none;
+  font-size: 20px;
+  color: red;
+  display: block;
+  border-bottom: 1px solid #ddd;
+}
+
+#myUL10 li {
+background-color: cyan;
+color: red;
+border: 1px solid #ddd;
+font-size:15px;
+text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.box {
+  float: left;
+  width: 50%;
+  
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+    </style>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+<div class="sidebar">
+    <div class="logo-details">
+        <div class="logo_name">JstMStudio</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+        <a href="../home.html">
+          <i class='bx bx-home'></i>
+          <span class="links_name">Home</span>
+        </a>
+         <span class="tooltip">Home</span>
+      </li>
+      <li>
+       <a href="../about.html">
+         <i class='bx bx-info-circle'></i>
+         <span class="links_name">De nobis</span>
+       </a>
+       <span class="tooltip">De nobis</span>
+     </li>
+     <li>
+     <li>
+       <a href="../documentation.html">
+         <i class='bx bxs-info-square'></i>
+         <span class="links_name">Documentation</span>
+       </a>
+       <span class="tooltip">Documentation</span>
+     </li>
+     <li>
+     <li>
+       <a href="../project.html">
+         <i class='bx bxs-briefcase-alt-2'></i>
+         <span class="links_name">Project</span>
+       </a>
+       <span class="tooltip">Project</span>
+     </li>
+     <li>
+       <a href="../client.html">
+        <i class='bx bx-user'></i>
+         <span class="links_name">Client</span>
+       </a>
+       <span class="tooltip">Client</span>
+     </li>
+     <li>
+       <a href="../web-app.html">
+        <i class='bx bx-log-in'></i>
+         <span class="links_name">Web App</span>
+       </a>
+       <span class="tooltip">Web App</span>
+     </li>
+      <li>
+       <a href="../api.html">
+         <i class='bx bx-extension'></i>
+         <span class="links_name">API</span>
+       </a>
+       <span class="tooltip">API</span>
+     </li>
+     <li>
+       <a href="../store.html">
+         <i class='bx bx-store-alt'></i>
+         <span class="links_name">Store</span>
+       </a>
+       <span class="tooltip">Store</span>
+     </li>
+     <li>
+    </ul>
+  </div>
+  <section class="home-section">
+<ul class="breadcrumb">
+  <li><a href="/home.html">Website</a></li>
+  <li><a href="/web-app.html">Web App</a></li>
+  <li><a href="">Services</a></li>
+  <li>Project Library</li>
+</ul>
+<br>
+<div style="margin-top:15px;text-align: center;padding:16px;">
+<h2>Project Library</h2>
+<p>Grata ad Project Library! Locum omnibus apertum fontem conferunt ad novum fontem apertum consilium conferendum. Bibliotheca Proiecti in pluribus generibus inceptis cum diversis linguis programmandi consistit. Bibliotheca Proiecta est omnino gratis utendi. Si consilium scias quod in Project Library praesto non est, id in Github in <a href="https://github.com/orgs/JstMStudio/discussionum/categories/upload">hic</a> impone discussion.</p>
+<br><br>
+<hr>
+<br>
+<h2>Cur aperi Sources?</h2>
+<p>Multa sunt utilitates quae ad fontem apertum conferunt. Omnia hic enumerabimus.</p>
+<br>
+<div class="clearfix">
+<div class="box">
+<h2>Confirma fiduciam</h2>
+  <p>Coding durum ac terrori esse potest, sed adiuvando ad aperiendum fontem incepta tua fiduciam construere potes ac peritia tua dilatare. Cum diversis inceptis adiuvas, occasionem plus discendi habes quam de tuo posses.</p>
+</div>
+  <div class="box">
+  <h2>Tendo librarium tuum</h2>
+  <p>Si novus es ad technologiam, potest difficile esse officium sine librario forti. Aperto fonte operans incepta ostendit passionem et dedicationem et allicit ad magistros potentiales, nedum personalem satisfactionem quae cum eo venit.</p></div>
+  <br><br>
+  </div>
+  <br><br>
+  <div class="clearfix">
+    <div class="box">
+  <h2>Disce plura cum aliis</h2>
+  <p>Quam interrete vasa et cinematographica e copia infinita materiarum discendi sunt, etiam plura discere potes ex peritis machinis qui ibi ac facti sunt. Contribuens ad fontem apertum occasionem tibi dat facultatem connectendi et discendi ab his hominibus.</p>
+  </div>
+  <div class="box">
+  <h2>Create cum communitate</h2>
+  <p>Omnes in vita nostra cotidiano fonte aperto usi sumus, sed vidistine umquam aliquid programmatis melius facere? His inceptis conferendo, vis in communitate esse potes quantum adiuvas ad fabricandum programmatum quem amas et in via quoque hominum interest.</p>
+  </div>
+  </div>
+  </div>
+<br>
+<br>
+<hr>
+<br>
+<br>
+<h2>Programma Linguae Project List</h2>
+<br><br>
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'HTML')" id="defaultOpen">HTML/CSS</button>
+  <button class="tablinks" onclick="openCity(event, 'JavaScript')">JavaScript</button>
+  <button class="tablinks" onclick="openCity(event, 'PHP')">PHP</button>
+  <button class="tablinks" onclick="openCity(event, 'SQL')">SQL</button>
+  <button class="tablinks" onclick="openCity(event, 'C++')">C++</button>
+  <button class="tablinks" onclick="openCity(event, 'C#')">C#</button>
+  <button class="tablinks" onclick="openCity(event, 'Go')">Go</button>
+  <button class="tablinks" onclick="openCity(event, 'Rust')">Rust</button>
+  <button class="tablinks" onclick="openCity(event, 'Python')">Python</button>
+  <button class="tablinks" onclick="openCity(event, 'React')">ReactJS</button>
+</div>
+
+<div id="HTML" class="tabcontent" style="padding:16px;">
+<h3>HTML/CSS</h3>
+   <p>HyperText Markup Language seu HTML est norma notae linguae pro documentis in navigatro interretiali destinato exhibendis. Adiutari potest technologiae sicut schedae Cascading Style et linguas scriptiones ut JavaScript.<br><br>Cascading Style schedae styli schedae adhibetur ad describendam documenti exhibitionem scriptam in lingua nota ut HTML vel XML. . CSS lapis angularis technicae totius mundi Telae, iuxta HTML et JavaScript.</p>
+  <br>
+  <input type="text" id="myInput" onkeyup="myFunction10()" placeholder="Search for server name.." title="Type in a name" style="background-color:blue;color:orange;">
+
+<ul id="myUL">
+  <li><div><a href="#">Nonea</a>a</div></li>
+  <li><div><a href="#">Noneb</a>a</div></li>
+  <li><div><a href="#">Nonec</a>a</div></li>
+</ul>
+<script>
+function myFunction10() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+</div>
+
+<div id="JavaScript" class="tabcontent" style="padding:16px;">
+<h3>JavaScript</h3>
+   <p>JavaScript, saepe ut JS abbreviatum, programmatio est una e nucleis technologiae Telae Mundialis, iuxta HTML et CSS. As of 2022, 98% paginarum usui JavaScript in clientelam ad mores webpage, saepius tertiam partem bibliothecarum incorporandi.</p>
+  <br>
+  <input type="text" id="myInput2" onkeyup="myFunction11()" placeholder="Search for server name.." title="Type in a name" style="background-color:blue;color:orange;">
+
+<ul id="myUL2">
+  <li><div><a href="#">Nonea</a>a</div></li>
+  <li><div><a href="#">Noneb</a>a</div></li>
+  <li><div><a href="#">Nonec</a>a</div></li>
+</ul>
+<script>
+function myFunction11() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput2");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL2");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+</div>
+
+  <div id="PHP" class="tabcontent" style="padding:16px;">
+<h3>PHP</h3>
+   <p>PHP generalis propositio est linguae scriptionis ad progressionem interretialem accommodata. Primum a programmate Danico-Canadiano Rasmus Lerdorf anno 1994 creatus est. PHP relatio exsecutionis nunc a Group PHP producta est.</p>
+  <br>
+  <input type="text" id="myInput3" onkeyup="myFunction13()" placeholder="Search for server name.." title="Type in a name" style="background-color:blue;color:orange;">
+
+<ul id="myUL3">
+  <li><div><a href="#">Nonea</a>a</div></li>
+  <li><div><a href="#">Noneb</a>a</div></li>
+  <li><div><a href="#">Nonec</a>a</div></li>
+</ul>
+<script>
+function myFunction13() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput3");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL3");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+</div>
+
+<div id="SQL" class="tabcontent" style="padding:16px;">
+<h3>SQL</h3>
+   <p>SQL Lingua peculiaris est usus in programmando et disposito ad notitias administrandas in systemate database relationis habito, vel pro rivulo processus in relationis ratiocinii systematis rivi.</p>
+  <br>
+  <input type="text" id="myInput4" onkeyup="myFunction14()" placeholder="Search for server name.." title="Type in a name" style="background-color:blue;color:orange;">
+
+<ul id="myUL4">
+  <li><div><a href="#">Nonea</a>a</div></li>
+  <li><div><a href="#">Noneb</a>a</div></li>
+  <li><div><a href="#">Nonec</a>a</div></li>
+</ul>
+<script>
+function myFunction14() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput4");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL4");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+</div>
+
+<div id="C++" class="tabcontent" style="padding:16px;">
+<h3>C++</h3>
+   <p>C ++ programmandi propositio generalis est linguae a Danico computatrum scientifico Bjarne Stroustrup creatae ut extensio linguae programmandi C vel "C cum Classibus".</p>
+  <br>
+  <input type="text" id="myInput5" onkeyup="myFunction15()" placeholder="Search for server name.." title="Type in a name" style="background-color:blue;color:orange;">
+
+<ul id="myUL5">
+  <li><div><a href="#">Nonea</a>a</div></li>
+  <li><div><a href="#">Noneb</a>a</div></li>
+  <li><div><a href="#">Nonec</a>a</div></li>
+</ul>
+<script>
+function myFunction15() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput5");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL5");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+</div>
+
+<div id="C#" class="tabcontent" style="padding:16px;">
+<h3>C#</h3>
+   <p>C# generalis propositio est, lingua programmandi multi-paradigma. C# typing statam ambit, typing validam, lexice scoped, imperativam, declarativam, functionem, genericam, objectum ordinatum, et disciplinas programmandi componentis ordinatos.</p>
+  <br>
+  <input type="text" id="myInput6" onkeyup="myFunction16()" placeholder="Search for server name.." title="Type in a name" style="background-color:blue;color:orange;">
+
+<ul id="myUL6">
+  <li><div><a href="#">Nonea</a>a</div></li>
+  <li><div><a href="#">Noneb</a>a</div></li>
+  <li><div><a href="#">Nonec</a>a</div></li>
+</ul>
+<script>
+function myFunction16() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput6");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL6");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+</div>
+
+<div id="Go" class="tabcontent" style="padding:16px;">
+<h3>Go</h3>
+   <p>Ite statically typus est, programmandi linguam ad Google exaratam designatam per Robert Griesemer, Rob Pike, et Ken Thompson. Syntaxi similis est C, sed cum salute memoriae, purgamentum collectionis, typing structurarum et concursus stili CSP.</p>
+  <br>
+  <input type="text" id="myInput7" onkeyup="myFunction17()" placeholder="Search for server name.." title="Type in a name" style="background-color:blue;color:orange;">
+
+<ul id="myUL7">
+  <li><div><a href="#">Nonea</a>a</div></li>
+  <li><div><a href="#">Noneb</a>a</div></li>
+  <li><div><a href="#">Nonec</a>a</div></li>
+</ul>
+<script>
+function myFunction17() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput7");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL7");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+</div>
+
+<div id="Rust" class="tabcontent" style="padding:16px;">
+<h3>Rust</h3>
+   <p>Aerugo est multi-paradigma, lingua programmandi generalis propositum. Rubigo observantiam insistit, salus typus, et concursus. Rubigo salutem memoriae tuetur, id est, omnes notationes ad validam memoriam pertinentes, non adhibito purgamentorum collectore vel relationis computatione in aliis linguis scientificis conservandis.</p>
+  <br>
+  <input type="text" id="myInput8" onkeyup="myFunction18()" placeholder="Search for server name.." title="Type in a name" style="background-color:blue;color:orange;">
+
+<ul id="myUL8">
+  <li><div><a href="#">Nonea</a>a</div></li>
+  <li><div><a href="#">Noneb</a>a</div></li>
+  <li><div><a href="#">Nonec</a>a</div></li>
+</ul>
+<script>
+function myFunction18() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput8");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL8");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+</div>
+
+<div id="Python" class="tabcontent" style="padding:16px;">
+<h3>Python</h3>
+   <p>Python est summus gradus, generalis propositi programmandi. Eius consilium philosophia codicem promptitudinem in lumine ponit cum incisis notabili usu. Python est dynamice typus et purgamentum colligitur. Plura paradigmata programmandi sustinet, inter structuras, obiectos ordinatos et programmatio functionis.</p>
+  <br>
+  <input type="text" id="myInput9" onkeyup="myFunction19()" placeholder="Search for server name.." title="Type in a name" style="background-color:blue;color:orange;">
+
+<ul id="myUL9">
+  <li><div><a href="#">Nonea</a>a</div></li>
+  <li><div><a href="#">Noneb</a>a</div></li>
+  <li><div><a href="#">Nonec</a>a</div></li>
+</ul>
+<script>
+function myFunction19() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput9");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL9");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+</div>
+
+<div id="React" class="tabcontent" style="padding:16px;">
+<h3>ReactJS</h3>
+   <p>React libera et aperta fons ante-finem JavaScript bibliotheca ad aedificandum interfaces usoris in UI componentibus. Meta conservatur et communitas singulorum tincidunt et societatum.</p>
+  <br>
+  <input type="text" id="myInput10" onkeyup="myFunction20()" placeholder="Search for server name.." title="Type in a name" style="background-color:blue;color:orange;">
+
+<ul id="myUL10">
+  <li><div><a href="#">Nonea</a>a</div></li>
+  <li><div><a href="#">Noneb</a>a</div></li>
+  <li><div><a href="#">Nonec</a>a</div></li>
+</ul>
+<script>
+function myFunction20() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput10");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL10");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+</div>
+
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+<br><br>
+<hr>
+  <br>
+  <div style="padding:16px;">
+<h1>Themes</h1>
+<p>Mos themata JstMStudio in colore quem mavis. Elige et eligere e colore infra statuto ut JstMStudio UI in praeponendo colorem facias.</p>
+<br>
+<div style="float:left;text-align:center;padding:10px;">
+<button onclick="myFunction()" style="background-color: black;" class="button2"></button>
+<button onclick="myFunction2()" style="background-color: red;" class="button2"></button>
+<button onclick="myFunction3()" style="background-color: blue;" class="button2"></button>
+<button onclick="myFunction4()" style="background-color: green;" class="button2"></button>
+<button onclick="myFunction5()" style="background-color: yellow;" class="button2"></button> 
+<button onclick="myFunction6()" style="background-color: orange;" class="button2"></button>
+<button onclick="myFunction7()" style="background-color: purple;" class="button2"></button>
+<button onclick="myFunction8()" style="background-color: magenta;" class="button2"></button>
+</div>
+</div>
+<script>
+
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+
+function myFunction2() {
+   var element = document.body;
+   element.classList.toggle("red-mode");
+}
+
+function myFunction3() {
+   var element = document.body;
+   element.classList.toggle("blue-mode");
+}
+
+function myFunction4() {
+   var element = document.body;
+   element.classList.toggle("green-mode");
+}
+
+function myFunction5() {
+   var element = document.body;
+   element.classList.toggle("yellow-mode");
+}
+
+function myFunction6() {
+   var element = document.body;
+   element.classList.toggle("orange-mode");
+}
+
+function myFunction7() {
+   var element = document.body;
+   element.classList.toggle("purple-mode");
+}
+
+function myFunction8() {
+   var element = document.body;
+   element.classList.toggle("magenta-mode");
+}
+</script>
+  </section>
+
+  <script>
+    let sidebar = document.querySelector(".sidebar");
+let closeBtn = document.querySelector("#btn");
+let searchBtn = document.querySelector(".bx-search");
+
+closeBtn.addEventListener("click", ()=>{
+  sidebar.classList.toggle("open");
+  menuBtnChange();//calling the function(optional)
+});
+
+searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+  sidebar.classList.toggle("open");
+  menuBtnChange(); //calling the function(optional)
+});
+
+// following are the code to change sidebar button(optional)
+function menuBtnChange() {
+ if(sidebar.classList.contains("open")){
+   closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the icons class
+ }else {
+   closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the icons class
+ }
+}
+  </script>
+
+</body>
+</html>
