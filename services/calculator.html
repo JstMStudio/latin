@@ -683,91 +683,8 @@ background-color: black;
         <input type="button" value="tan" name="tannik" onclick="tannikal()" />
       </div>
     </form>
-<br>
-    <hr>
-  <br>
-<h1>Themes</h1>
-<p>Mos themata JstMStudio in colore quem mavis. Elige et eligere e colore infra statuto ut JstMStudio UI in praeponendo colorem facias.</p>
-<br>
-<div style="float:left;text-align:center;padding:10px;">
-<button onclick="myFunction()" style="background-color: black;" class="button2"></button>
-<button onclick="myFunction2()" style="background-color: red;" class="button2"></button>
-<button onclick="myFunction3()" style="background-color: blue;" class="button2"></button>
-<button onclick="myFunction4()" style="background-color: green;" class="button2"></button>
-<button onclick="myFunction5()" style="background-color: yellow;" class="button2"></button> 
-<button onclick="myFunction6()" style="background-color: orange;" class="button2"></button>
-<button onclick="myFunction7()" style="background-color: purple;" class="button2"></button>
-<button onclick="myFunction8()" style="background-color: magenta;" class="button2"></button>
-</div>
-<script>
-
-function myFunction() {
-   var element = document.body;
-   element.classList.toggle("dark-mode");
-}
-
-function myFunction2() {
-   var element = document.body;
-   element.classList.toggle("red-mode");
-}
-
-function myFunction3() {
-   var element = document.body;
-   element.classList.toggle("blue-mode");
-}
-
-function myFunction4() {
-   var element = document.body;
-   element.classList.toggle("green-mode");
-}
-
-function myFunction5() {
-   var element = document.body;
-   element.classList.toggle("yellow-mode");
-}
-
-function myFunction6() {
-   var element = document.body;
-   element.classList.toggle("orange-mode");
-}
-
-function myFunction7() {
-   var element = document.body;
-   element.classList.toggle("purple-mode");
-}
-
-function myFunction8() {
-   var element = document.body;
-   element.classList.toggle("magenta-mode");
-}
-</script>
-  </section>
-
-  <script>
-    let sidebar = document.querySelector(".sidebar");
-let closeBtn = document.querySelector("#btn");
-let searchBtn = document.querySelector(".bx-search");
-
-closeBtn.addEventListener("click", ()=>{
-  sidebar.classList.toggle("open");
-  menuBtnChange();//calling the function(optional)
-});
-
-searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
-  sidebar.classList.toggle("open");
-  menuBtnChange(); //calling the function(optional)
-});
-
-// following are the code to change sidebar button(optional)
-function menuBtnChange() {
- if(sidebar.classList.contains("open")){
-   closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
- }else {
-   closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
- }
-}
-
-let calculatorOne = document.getElementById("display");
+    <script>
+    let calculatorOne = document.getElementById("display");
 
 let Calchistory = {
   content: "",
@@ -921,6 +838,90 @@ document.addEventListener("keyup", function (e) {
     valueGet(key);
   }
 });
+    </script>
+<br>
+    <hr>
+  <br>
+<h1>Themes</h1>
+<p>Mos themata JstMStudio in colore quem mavis. Elige et eligere e colore infra statuto ut JstMStudio UI in praeponendo colorem facias.</p>
+<br>
+<div style="float:left;text-align:center;padding:10px;">
+<button onclick="myFunction()" style="background-color: black;" class="button2"></button>
+<button onclick="myFunction2()" style="background-color: red;" class="button2"></button>
+<button onclick="myFunction3()" style="background-color: blue;" class="button2"></button>
+<button onclick="myFunction4()" style="background-color: green;" class="button2"></button>
+<button onclick="myFunction5()" style="background-color: yellow;" class="button2"></button> 
+<button onclick="myFunction6()" style="background-color: orange;" class="button2"></button>
+<button onclick="myFunction7()" style="background-color: purple;" class="button2"></button>
+<button onclick="myFunction8()" style="background-color: magenta;" class="button2"></button>
+</div>
+<script>
+
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+
+function myFunction2() {
+   var element = document.body;
+   element.classList.toggle("red-mode");
+}
+
+function myFunction3() {
+   var element = document.body;
+   element.classList.toggle("blue-mode");
+}
+
+function myFunction4() {
+   var element = document.body;
+   element.classList.toggle("green-mode");
+}
+
+function myFunction5() {
+   var element = document.body;
+   element.classList.toggle("yellow-mode");
+}
+
+function myFunction6() {
+   var element = document.body;
+   element.classList.toggle("orange-mode");
+}
+
+function myFunction7() {
+   var element = document.body;
+   element.classList.toggle("purple-mode");
+}
+
+function myFunction8() {
+   var element = document.body;
+   element.classList.toggle("magenta-mode");
+}
+</script>
+  </section>
+
+  <script>
+    let sidebar = document.querySelector(".sidebar");
+let closeBtn = document.querySelector("#btn");
+let searchBtn = document.querySelector(".bx-search");
+
+closeBtn.addEventListener("click", ()=>{
+  sidebar.classList.toggle("open");
+  menuBtnChange();//calling the function(optional)
+});
+
+searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+  sidebar.classList.toggle("open");
+  menuBtnChange(); //calling the function(optional)
+});
+
+// following are the code to change sidebar button(optional)
+function menuBtnChange() {
+ if(sidebar.classList.contains("open")){
+   closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+ }else {
+   closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+ }
+}
 
 function myFunction() {
   var x = document.getElementById("myTopnav");
